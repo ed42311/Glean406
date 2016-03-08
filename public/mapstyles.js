@@ -26,9 +26,7 @@ var mapStyles = [{
   },{
     "featureType": "poi.place_of_worship",
     "stylers": [{ "visibility": "off" }]
-  },{
-  	    disableDoubleClickZoom: false;
-  }
+  },
 ];
 
 module.exports = mapStyles;
