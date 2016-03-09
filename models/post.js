@@ -9,6 +9,6 @@ var FloraSchema = new Schema({
   // comments: [{type: mongoose.Schema.Types.ObjectId, ref: 'Comment'}]
 });
 
-module.exports = mongoose.model('Post', FloraSchema);
+module.exports = mongoose.model('Flora', FloraSchema);
 
 // for line 7 {type: mongoose.schema.Types.ObjectId, ref: 'User'}
