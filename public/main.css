@@ -1,3 +1,31 @@
 .navbar {
 	background-color: #7FFF00;
 }
+.sizer1 img {
+	max-height: 50%;
+	max-width: 50%;
+}
+#morel {
+	max-height: 26%;
+	max-width: 26%;
+}
+#rosemary {
+	max-height: 30%;
+	max-width: 30%;
+}
+.sizer2 img{
+	max-height: 29%;
+	max-width: 29%;
+}
+.sizer3 img{
+	max-height: 33%;
+	max-width: 33%;
+}
+#straw{
+	max-height: 29%;
+	max-width: 29%;
+}
+#apple{
+	max-height: 29%;
+	max-width: 29%;
+}
