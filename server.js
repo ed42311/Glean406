@@ -3,9 +3,10 @@ var app = express();
 var bodyParser = require('body-parser');
 var passport = require('passport');
 var mongoose = require('mongoose');
+mongoose.connect('mongodb://localhost/forageposts');
 var router = express.Router();
 var port = process.env.PORT || 8080;
-
+var floraRoutes = require('./routes/flora');
 app.use(express.static('public'));
 
 app.set('view engine', 'ejs');
@@ -21,9 +22,8 @@ app.use(bodyParser.json());
 
 
 
-app.get('/', function(req, res) {
-	res.render('index');
-})
+
+app.use('/api/flora', floraRoutes);
 
 app.listen(port, function(req, res){
   console.log('⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡\n⚡⚡⚡⚡ Forage Away ' + port + ' ⚡⚡⚡⚡\n⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡')
