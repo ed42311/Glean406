@@ -9,6 +9,7 @@ var port = process.env.PORT || 8080;
 var floraRoutes = require('./routes/flora');
 var userRoutes = require('./routes/user');
 var session = require('express-session');
+var flash = require('connect-flash');
 app.use(express.static('public'));
 
 app.set('view engine', 'ejs');
@@ -16,7 +17,7 @@ app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-
+app.use(flash());
 app.use(session({ secret: 'ilovescotchscotchyscotchscotch' })); // session secret
 app.use(passport.initialize());
 app.use(passport.session()); // persistent login sessions
@@ -37,11 +38,15 @@ app.use(function(req, res, next) {
 
 app.get('/', function(req, res){
     var user = req.user || "no user";
-    res.render('index', {user: user})
+    res.render('index', {user: ''})
 });
 
 app.get('/submitForage', function(req, res){
-    res.render('submitForage', {user: 'a'})
+    res.render('submitForage', {user: ''})
+});
+
+app.get('/contact', function(req, res){
+    res.render('contact', {user: ''})
 });
 
 app.use('/api/flora', floraRoutes);
