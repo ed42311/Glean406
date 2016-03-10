@@ -29,3 +29,9 @@
 	max-height: 29%;
 	max-width: 29%;
 }
+
+#map { 	
+	height: 600px;
+    width: 600px;
+}
+
