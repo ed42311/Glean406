@@ -40,6 +40,10 @@ app.get('/', function(req, res){
     res.render('index', {user: user})
 });
 
+app.get('/submitForage', function(req, res){
+    res.render('submitForage', {user: 'a'})
+});
+
 app.use('/api/flora', floraRoutes);
 
 
