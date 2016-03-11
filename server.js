@@ -49,6 +49,10 @@ app.get('/contact', function(req, res){
     res.render('contact', {user: ''})
 });
 
+app.get('/login', function(req, res){
+	res.render('login', {user: user})
+});
+
 app.use('/api/flora', floraRoutes);
 
 
