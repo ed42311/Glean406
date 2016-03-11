@@ -29,3 +29,138 @@
 	max-height: 29%;
 	max-width: 29%;
 }
+
+#map { 	
+	height: 600px;
+    width: 600px;
+}
+
+.login-bg {
+    background-color: rgba(242,245,242,1);
+}
+
+.login-wrapper{
+    border-radius: 5px;
+    width: 45%;
+    box-shadow: rgba(0,0,0,0.3) 5px 6px 10px;
+    background-color: #EEE;
+    border-color: #e5e5e5;
+    margin-top: 5vh;
+}
+
+.login-logo {
+    width: 80%;
+}
+
+.login-logoWrapper {
+    background-color: #f9f9f9;
+    margin: -20px;
+    padding-top: 30px;
+    padding-bottom: 50px;
+        margin-bottom: 30px;
+    border: rgba(32,32,32,0.075) solid 1px;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    -webkit-clip-path: polygon(66% 90%, 100% 90%, 100% 0, 0 0, 0 90%, 33% 90%, 50% 100%);
+    clip-path: polygon(66% 90%, 100% 90%, 100% 0, 0 0, 0 90%, 33% 90%, 50% 100%);
+}
+
+.login-input{
+    box-shadow: rgba(32,32,32,0.4) 1.5px 1.5px 3px;
+}
+
+.login-active-left {
+  border-right: none;
+  border-color: #DDB476 !important;
+  box-shadow: inset 0 1px 1px rgba(0,0,0,0.075),0 0 8px rgba(221,180,118,0.6) !important;
+}
+
+.login-active-right {
+  border-left: none;
+  border-color: #DDB476 !important;
+  box-shadow: inset 0 1px 1px rgba(0,0,0,0.075),0 0 8px rgba(221,180,118,0.6) !important;
+}
+
+#userInfo:first-child{
+  margin-top: 50px;
+}
+
+.login-input-wrapper{
+    transition: all .26s;
+    transform: scale(1);
+}
+
+.login-input-wrapper-scaled{
+    transition: all .26s;
+    transform: scale(1.05);
+}
+
+.login-input-wrapper:hover{
+    transition: all .26s;
+    transform: scale(1.05);
+}
+
+.login-submit {
+    margin-top: 50px;
+    border-radius: 2px;
+    box-shadow: rgba(32,32,32,.2) 2px 2px 2px;
+    width: 95%;
+    outline: none;
+    border-color: transparent;
+    transition: background-color .4s;
+}
+
+.login-submit:focus {
+    outline: none;
+    border: none;
+}
+
+.login-submit:hover {
+    border-color: transparent;
+    background-color: #DDB476;
+    color: #f9f9f9 !important;
+    transition: background-color color .4s;
+}
+
+
+.section-left, .section-right {
+  position: absolute;
+  top: 0;
+  width: 50%;
+  height: 100vh;
+  background-color: #323232;
+  z-index: 999;
+}
+
+.section-left {
+  left: 0;
+}
+
+.section-right {
+  right: 0;
+}
+
+#loader-wrapper {
+  display: block;
+    margin-right: auto;
+    width: 500px;
+    margin-left: auto;
+}
+
+#loader {
+  margin-left: 140px;
+  position: absolute;
+  color: #fff;
+  top: 20vh;
+  z-index: 10000;
+}
+
+#loader div {
+  display: inline-block;
+  text-align: center;
+  font-size: 230px;
+  margin-right: 50px;
+  width: 0px;
+  margin-left: 10px;
+}
+

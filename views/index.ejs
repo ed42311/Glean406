@@ -6,15 +6,7 @@
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 		<link rel="stylesheet" type="text/css" href="main.css">
 		<h1>Hello!</h1>
-	 	<style type="text/css">
-      		html, body { 
-      		height: 100%; 
-      		margin: 0; 
-      		padding: 0; }
-      		#map { 	height: 600px;
-					         width: 600px;
-      		}
-    </style>
+
 </head>
 <body>
  <div id="myCarousel" class="carousel slide" data-ride="carousel">
@@ -67,18 +59,31 @@
   </a>
 </div>
 
+
  <div id="map"></div>
 
 
+
 </body>
-	   <script async defer
+<script>
+      function initMap() {
+          var mapDiv = document.getElementById('map');
+          var map = new google.maps.Map(mapDiv, {
+          center: {lat: 46.86077911287492, lng: -113.99279092176516},
+          zoom: 8
+        });
+      }
+</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.14.7/react.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.14.7/react-dom.js"></script>
+    <script src="https://code.jquery.com/jquery-2.2.0.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <script type="text/babel" src="map.js"> </script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js"></script>
+   <script async defer
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBgbJrD_jtCPYZxXArPlJg68YYxFqEJ2QM
         &libraries=visualization&callback=initMap">
     </script>
-    <script src="https://code.jquery.com/jquery-2.2.0.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-    <script src="map.js"> </script>
-	 <script src="app.js"></script>
-   <script src="mapstyles.js"></script>
+
 
 </html>
