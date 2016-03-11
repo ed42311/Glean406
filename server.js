@@ -38,19 +38,22 @@ app.use(function(req, res, next) {
 
 app.get('/', function(req, res){
     var user = req.user || "no user";
-    res.render('index', {user: ''})
+    res.render('index', {user: user})
 });
 
 app.get('/submitForage', function(req, res){
-    res.render('submitForage', {user: ''})
+    var user = req.user || "no user";
+    res.render('submitForage', {user: user})
 });
 
 app.get('/contact', function(req, res){
-    res.render('contact', {user: ''})
+    var user = req.user || "no user";
+    res.render('contact', {user: user})
 });
 
 app.get('/login', function(req, res){
-	res.render('login', {user: user})
+	var user = req.user || "no user";
+  res.render('login', {user: user})
 });
 
 app.use('/api/flora', floraRoutes);

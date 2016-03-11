@@ -1,4 +1,7 @@
-var firebase = new Firebase("<https://Forager.firebaseIO.com>");
+var templat;
+var templng;
+var marker;
+
 
 function initMap() {
   var map = new google.maps.Map(document.getElementById('map'), {
@@ -13,11 +16,28 @@ function initMap() {
     }],
     disableDoubleClickZoom: true
   })
-  map.addListener('click', function(e) {
-  var marker = new google.maps.Marker({
-    position: {lat: e.latLng.lat(), lng: e.latLng.lng()},
-    map: map
+
+
+
+  google.maps.event.addListenerOnce(map, 'click', function(e) {
+  
+    templat=e.latLng.lat();
+    templng=e.latLng.lng();
+
+      marker = new google.maps.Marker({
+        position: {lat: templat, lng: templng},
+        map: map,
+        draggable: true
+      });
   });
-});
+
+  google.maps.event.addListener(marker, 'dragend', function(e){
+    templat=e.latLng.lat();
+    templng=e.latLng.lng();
+
+      console.log(templat);
+      console.log(templng);
+
+  })
 };
 

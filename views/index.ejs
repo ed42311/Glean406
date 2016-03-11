@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-		
+	     <script src="https://cdn.firebase.com/js/client/2.2.1/firebase.js"></script>	
 		<%- include ./navbar.ejs %>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 		<link rel="stylesheet" type="text/css" href="main.css">
@@ -65,16 +65,8 @@
 
 
 </body>
-<script>
-      function initMap() {
-          var mapDiv = document.getElementById('map');
-          var map = new google.maps.Map(mapDiv, {
-          center: {lat: 46.86077911287492, lng: -113.99279092176516},
-          zoom: 8
-        });
-      }
-</script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.14.7/react.js"></script>
+  
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.14.7/react.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.14.7/react-dom.js"></script>
     <script src="https://code.jquery.com/jquery-2.2.0.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
@@ -84,6 +76,50 @@
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBgbJrD_jtCPYZxXArPlJg68YYxFqEJ2QM
         &libraries=visualization&callback=initMap">
     </script>
+
+<script>
+var templat;
+var templng;
+
+
+function initMap() {
+  var map = new google.maps.Map(document.getElementById('map'), {
+    center: {lat: 46.86077911287492, lng: -113.99279092176516},
+    zoom: 8,
+    styles: [{
+      featureType: 'poi',
+      stylers: [{ visibility: 'off' }]  // Turn off points of interest.
+    }, {
+      featureType: 'transit.station',
+      stylers: [{ visibility: 'off' }]  // Turn off bus stations, train stations, etc.
+    }],
+    disableDoubleClickZoom: true
+  })
+
+
+
+  google.maps.event.addListenerOnce(map, 'click', function(e) {
+    templat=e.latLng.lat();
+    templng=e.latLng.lng();
+
+    var marker = new google.maps.Marker({
+      position: {lat: templat, lng: templng},
+      map: map,
+      draggable: true
+    });
+
+    google.maps.event.addListener(marker, 'dragend', function(e){
+
+      templat=e.latLng.lat();
+      templng=e.latLng.lng();
+
+        console.log(templat);
+        console.log(templng);
+    });
+  });
+};
+</script>
+
 
 
 </html>

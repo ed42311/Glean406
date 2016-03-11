@@ -5,7 +5,8 @@ var FloraSchema = new Schema({
   name: String,
   category: String,
   season: String,
-  latlong: String,
+  lat: String,
+  lng: String,
   comments: [{type: mongoose.Schema.Types.ObjectId, ref: 'Comment'}]
 });
 
