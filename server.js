@@ -43,6 +43,7 @@ app.get('/', function(req, res){
 
 app.get('/submitForage', function(req, res){
     var user = req.user || "no user";
+    console.log(user)
     res.render('submitForage', {user: user})
 });
 
@@ -51,10 +52,11 @@ app.get('/contact', function(req, res){
     res.render('contact', {user: user})
 });
 
-app.get('/login', function(req, res){
-	var user = req.user || "no user";
-  res.render('login', {user: user})
-});
+// app.get('/login', function(req, res){
+//   console.log("user at login: ")
+// 	var user = req.user || "no user";
+//   res.render('login', {user: user})
+// });
 
 app.use('/api/flora', floraRoutes);
 
