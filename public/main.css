@@ -1,9 +1,12 @@
 .navbar {
 	background-color: #7FFF00;
 }
-.sizer1 img {
-	max-height: 50%;
-	max-width: 50%;
+#JumboBackground {
+  background-color: #7FFF00;
+} 
+#huck {
+  max-height: 37%;
+  max-width: 37%;
 }
 #morel {
 	max-height: 26%;
@@ -13,13 +16,21 @@
 	max-height: 30%;
 	max-width: 30%;
 }
-.sizer2 img{
+#chantrelle {
 	max-height: 29%;
 	max-width: 29%;
 }
-.sizer3 img{
-	max-height: 33%;
-	max-width: 33%;
+#chive {
+  max-height: 32%;
+  max-width: 32%;
+}
+#cactus {
+  max-height: 29%;
+  max-width: 29%;
+}
+#onion {
+  max-height: 33%;
+  max-width: 33%;
 }
 #straw{
 	max-height: 29%;
@@ -30,9 +41,9 @@
 	max-width: 29%;
 }
 
-#map { 	
-	height: 600px;
-    width: 600px;
+#map { 
+  height: 600px;
+  width: 600px;
 }
 
 .login-bg {
@@ -117,7 +128,7 @@
 
 .login-submit:hover {
     border-color: transparent;
-    background-color: #DDB476;
+    background-color: #7FFF00;
     color: #f9f9f9 !important;
     transition: background-color color .4s;
 }
@@ -163,4 +174,30 @@
   width: 0px;
   margin-left: 10px;
 }
-
+#mapRow {
+  align-content: center;
+}
+#category {
+  width: 170px;
+  text-align: center;
+}
+@media only screen and (max-width: 600px) {
+    #map {
+        align-content: center;
+        height: 320px;
+        width: 320px;
+    }
+}
+@media only screen and (max-width: 600px) {
+    #ForageText {
+        text-align: center;
+    }
+}
+@media only screen and (max-width: 600px) {
+    #HeadText {
+        text-align: center;
+    }
+}
+#ForageText {
+  text-align: center;
+}
