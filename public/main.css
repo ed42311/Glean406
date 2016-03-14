@@ -226,3 +226,6 @@
 .hideMe {
   display: none;
 }
+.dropdown-menu {
+  min-width: 140px;
+}

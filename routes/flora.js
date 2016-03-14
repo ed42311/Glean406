@@ -28,6 +28,7 @@ router.route('/')
     flora.description = req.body.description || 'none';
   	flora.lat = req.body.lat;
     flora.lng = req.body.lng;
+    flora.isPrivate = req.body.isPrivate;
     console.log(flora);
     flora.save(function(err, flora){
   	  if(err){

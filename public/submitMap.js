@@ -63,6 +63,8 @@ function submitForm(e){
           var category = $( "#cat option:selected" ).text();
           var season = $( "#season option:selected" ).text();
           var description = document.getElementById("description").value;
+          var checkbox = ('#cb:checkbox:checked').length > 0
+          console.log(checkbox, "CHECKBODXXXXX")
 
 
           var data = ({
@@ -71,7 +73,8 @@ function submitForm(e){
                     season: season,
                     lat: templat,
                     lng: templng, 
-                    description: description
+                    description: description,
+                    isPrivate: checkbox
             });
             console.log(data);
             $.ajax({
