@@ -50,17 +50,18 @@ function initMap() {
 
       document.getElementById("lat").value = templat;
       document.getElementById("lng").value = templng;
+      alert("trying to drag");
 
     });
   });
 };
 
 function submitForm(e){
-          e.preventDefault();
-
+  console.log("found submit form");
+     e.preventDefault();
           var name = document.getElementById("name").value;
-          var category = document.getElementById("category").value;
-          var season = document.getElementById("season").value;
+          var category = $( "#cat option:selected" ).text();
+          var season = $( "#season option:selected" ).text();
           var description = document.getElementById("description").value;
 
 
@@ -72,7 +73,7 @@ function submitForm(e){
                     lng: templng, 
                     description: description
             });
-
+            console.log(data);
             $.ajax({
               url: "/api/flora",
               dataType: 'json',
@@ -80,7 +81,7 @@ function submitForm(e){
               type:'POST',
               success: function(response){
                 console.log("posting data!", data, response)
-                // document.location='/'
+                document.location='/'
               }.bind(this),
               error: function(xhr, status, err){
                 console.log("not posting data!")
@@ -88,4 +89,9 @@ function submitForm(e){
               }.bind(this)
             })
           };
+
+
+
+$('#submitForm').on('click', submitForm);
+
 

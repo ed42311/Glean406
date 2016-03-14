@@ -1,7 +1,5 @@
-
 var templat;
 var templng;
-
 
 function initMap() {
   var map = new google.maps.Map(document.getElementById('map'), {
@@ -15,77 +13,65 @@ function initMap() {
       stylers: [{ visibility: 'off' }]  // Turn off bus stations, train stations, etc.
     }],
     disableDoubleClickZoom: true
-  })
+  });
 
+  getFlora(map);
+}
 
+function getFlora(map){
+  console.log('got to this point');
 
-  google.maps.event.addListenerOnce(map, 'click', function(e) {
-    templat=e.latLng.lat();
-    templng=e.latLng.lng();
+  $.ajax({
+    url: "/api/flora",
+    dataType: 'json',
+    type: 'GET'
+  }).done(function(data) {
+    data.forEach(function(flora) {
+      console.log(flora);
+      
+      var contentString = ('<div id=' + flora.name + '>\
+                   <p> <h3>' + flora.name + '</h3> </p>\
+                   <p> <h5>' + "Harvest Season: " + flora.season + '<h5> </p>\
+                   <p> <h5>' + "Type: " + flora.category + '<h5> </p>\
+                   <p> <h5>' + "Description: " + flora.description + '<h5> </p>\
+                 </div>');
+                 
 
-    document.getElementById("lat").value = templat;
-    document.getElementById("lng").value = templng;
+      var infowindow = new google.maps.InfoWindow({
+        content: contentString
+      });
+      
 
-    var marker = new google.maps.Marker({
-      position: {lat: templat, lng: templng},
+      var floraMarker = new google.maps.Marker({
+        position: {
+          lat: Number(flora.lat), 
+          lng: Number(flora.lng)
+        },
+        map: map,
+        draggable: false,
+        animation: google.maps.Animation.DROP
+      });
+      floraMarker.setMap(map);
+
+      floraMarker.addListener('click', function() {
+        infowindow.open(map, floraMarker);
+      });
+    });
+
+  });
+
+  console.log('after done');
+};    
+/*
+      var markerOne = new google.maps.Marker({
+      position: {e.lat, e.lng},
       map: map,
       draggable: true,
       animation: google.maps.Animation.DROP
     });
-    //   marker.addListener('click', toggleBounce);
-    //   }
 
-    //   function toggleBounce() {
-    //     if (marker.getAnimation() !== null) {
-    //       marker.setAnimation(null);
-    //     } else {
-    //       marker.setAnimation(google.maps.Animation.BOUNCE);
-    //     }
-    // }
-
-    google.maps.event.addListener(marker, 'dragend', function(e){
-
-      templat=e.latLng.lat();
-      templng=e.latLng.lng();
-
-      document.getElementById("lat").value = templat;
-      document.getElementById("lng").value = templng;
-
-    });
-  });
+    markerOne.setMap(map);
 };
+*/
 
-function submitForm(e){
-          e.preventDefault();
-
-          var name = document.getElementById("name").value;
-          var category = document.getElementById("category").value;
-          var season = document.getElementById("season").value;
-          var description = document.getElementById("description").value;
-
-
-          var data = ({
-                    name: name,
-                    category: category,
-                    season: season,
-                    lat: templat,
-                    lng: templng, 
-                    description: description
-            });
-
-            $.ajax({
-              url: "/api/flora",
-              dataType: 'json',
-              data: data,
-              type:'POST',
-              success: function(response){
-                console.log("posting data!", data, response)
-                // document.location='/'
-              }.bind(this),
-              error: function(xhr, status, err){
-                console.log("not posting data!")
-                console.error(this.props.url, status, err.toString());
-              }.bind(this)
-            })
-          };
 

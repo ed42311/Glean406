@@ -14,7 +14,7 @@
   
   </head>
   <body>
-    <form role="form" id="submitform">
+    <form role="form" id="forageForm">
       <legend>Submit a Forage spot</legend>
     
       <div class="form-group">
@@ -24,53 +24,53 @@
 
       <div>
        <label for="sel1">Categories</label>
-        <select class="form-control">
+        <select id="cat" class="form-control">
          <option>Please select a Category...</option>
-         <option>Berries</option>
-         <option>Fruits</option>
-         <option>Fungi</option>
-         <option>Herbs</option>
-         <option>Root Vegetables</option>
+         <option value="berries">Berries</option>
+         <option value="fruits">Fruits</option>
+         <option value="fungi">Fungi</option>
+         <option value="herbs">Herbs</option>
+         <option value="rootVegetables">Root Vegetables</option>
         </select>
       </div>
 
       <div>
        <label for="sel1">Harvest Month</label>
-        <select class="form-control">
+        <select id="season" class="form-control">
          <option>Please select a Harvest Month...</option>
-         <option>January</option>
-         <option>February</option>
-         <option>March</option>
-         <option>April</option>
-         <option>May</option>
-         <option>June</option>
-         <option>July</option>
-         <option>August</option>
-         <option>September</option>
-         <option>October</option>
-         <option>November</option>
-         <option>December</option>
+         <option value="january">January</option>
+         <option value="february">February</option>
+         <option value="march">March</option>
+         <option value="april">April</option>
+         <option value="may">May</option>
+         <option value="june">June</option>
+         <option value="july">July</option>
+         <option value="august">August</option>
+         <option value="september">September</option>
+         <option value="october">October</option>
+         <option value="november">November</option>
+         <option value="december">December</option>
         </select>
       </div>
 
-      <div class="form-group">
+      <div class="hideMe form-group">
         <label for="">Latitude</label>
         <input type="text" class="form-control" id="lat" placeholder="*Don't Worry, this will auto-populate, use map below*">
       </div>
 
-      <div class="form-group">
+      <div class="hideMe form-group">
         <label for="">Longitude</label>
         <input type="text" class="form-control" id="lng" placeholder="*Don't Worry, this will auto-populate, use map below*">
       </div>
 
       <div class="form-group">
         <label for="">Description</label>
-        <textarea class="form-control" rows="3"></textarea>
+        <textarea id="description" class="form-control" rows="3"></textarea>
       </div>
     
       
     
-      <button onclick="submitForm()" class="btn btn-primary">Submit</button>
+      <button id="submitForm" class="btn btn-primary">Submit</button>
     </form>
 
      <div id="map"></div>

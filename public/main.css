@@ -1,11 +1,11 @@
 .navbar {
-	background-color: #7FFF00;
-}
-.navbar a:hover {
-  color: blue !important;
+  background-color: #7FFF00;
 }
 #description {
   margin: 10px 25px 35px 25px;
+}
+.navbar a:hover {
+  color: blue !important;
 }
 #describetext {
   font-size: 24px;
@@ -15,10 +15,10 @@
   margin-left: 25px;
   margin-right: 25px;
 }
-#submitform, #map {
+#forageForm, #map {
   margin: 0 25px 0 25px;
 }
-#submitform {
+#forageForm {
   margin-bottom: 35px;
 }
 .sizer1 img {
@@ -222,4 +222,7 @@
 }
 #ForageText {
   text-align: center;
+}
+.hideMe {
+  display: none;
 }
