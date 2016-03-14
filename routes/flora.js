@@ -32,6 +32,7 @@ router.route('/')
   	  if(err){
   		res.send(err);
   	  } else {
+        console.log(flora);
   		  res.json(flora);
   	  }
     })
