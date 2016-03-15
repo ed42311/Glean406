@@ -1,30 +1,61 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-  <head>
-  <%- include ./navbar.ejs %>
-    <title>signup</title>
+<head>
+<%- include ./navbar.ejs %>
+    <title>Registration</title>
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css"> <!-- load bootstrap css --><!-- load fontawesome -->
+    <link rel="stylesheet" href="./main.css">
+</head>
+<body class="login-bg loaded">
+  <div class="container">
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-  	<link rel="stylesheet" href="main.css"> 
+
+    <div id="modal" class="well login-wrapper center-block fade-in">
+
+        <div class="login-logoWrapper">
+            <h2 style="text-align: center;">Register</h2>
+        </div>
+
+            <div id="error"></div>
+
+      <!--  <% if (message.length > 0) { %>
+      <div class="alert alert-danger"><%= message %></div>
+          <% } %> -->
+          <form action="/signup" method="POST" role="form" id="register">
+
+          <div id="userInfo">
+            <div class="form-group">
+                <div class="input-group login-input-wrapper">
+                  <span class="input-group-addon login-input" id="basic-addon1"><i class="fa fa-user"></i></span>
+                  <input id="userName" type="text" class="form-control login-input" placeholder="Username" name="email">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="input-group login-input-wrapper">
+                  <span class="input-group-addon login-input" id="basic-addon1"><i class="fa fa-lock"></i></span>
+                  <input id="userPw" type="password" class="form-control login-input" placeholder="Password" name="password">
+                </div>
+            </div>
+          </div>
+
+               <button type="submit" class="btn btn-default btn-lg center-block login-submit">Sign In</button>
+        </form>
+      
+    </div>
+
+
+  </div>
+
   
-  </head>
-  <body>
-    <form action="/signup" method="POST" role="form">
-    	<legend>User Registration</legend>
-    
-    	<div class="form-group">
-    		<label for="">email</label>
-    		<input name="email" type="email" class="form-control" id="" placeholder="email">
-    	</div>
-    	<div class="form-group">
-    		<label for="">password</label>
-    		<input name="password" type="password" class="form-control" id="" placeholder="password">
-    	</div>
 
-     	<button type="submit" class="btn btn-primary">Submit</button>
-    </form>
-  <script src="https://code.jquery.com/jquery-2.2.0.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-  <script src="user.js"></script>
-  </body>	
+<script src="https://cdnjs.cloudflare.com/ajax/libs/blueimp-md5/1.1.1/js/md5.js"></script>
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script src="user.js"></script>
+
+
+
+</script>
+</body>
 </html>

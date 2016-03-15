@@ -1,25 +1,46 @@
 .navbar {
-  background-color: #7FFF00;
+  background-color: green;
 }
-#description {
-  margin: 10px 25px 35px 25px;
+.navbar a {
+  color: black !important;
 }
 .navbar a:hover {
-  color: blue !important;
+  color: #A52A2A !important;
+}
+.container {
+  margin: auto;
+}
+#questionbox {
+  padding: 30px 25px 0 25px;
+}
+#HeadText {
+  text-align: center;
+}
+#description {
+  margin: auto;
+  padding: 0 25px 0 25px;
 }
 #describetext {
   font-size: 24px;
   margin-top: 20px;
 }
 #questionform {
-  margin-left: 25px;
-  margin-right: 25px;
+  margin: 0 20px 0 20px;
+}
+#forageForm legend {
+  font-size: 24px;
 }
 #forageForm, #map {
   margin: 0 25px 0 25px;
 }
 #forageForm {
-  margin-bottom: 35px;
+  margin: 35px auto 35px auto;
+  width: 800px;
+}
+#ForageText {
+  font-size: 24px !important;
+  margin-left: 125px;
+  width: 300px;
 }
 .sizer1 img {
 	max-height: 50%;
@@ -75,6 +96,7 @@
 #map { 
   height: 600px;
   width: 600px;
+  margin: auto;
 }
 
 .login-bg {
@@ -99,7 +121,7 @@
     margin: -20px;
     padding-top: 30px;
     padding-bottom: 50px;
-        margin-bottom: 30px;
+    margin-bottom: 30px;
     border: rgba(32,32,32,0.075) solid 1px;
     border-top-right-radius: 5px;
     border-top-left-radius: 5px;
@@ -209,14 +231,18 @@
   align-content: center;
 }
 #category {
-  width: 170px;
+  width: 285px;
   text-align: center;
+  padding: 0 20px 20px 20px;
+  font-size: 24px !important;
+  margin-top: 0px;
 }
 @media only screen and (max-width: 600px) {
     #map {
         align-content: center;
         height: 320px;
         width: 320px;
+        margin: auto;
     }
 }
 @media only screen and (max-width: 600px) {
@@ -237,4 +263,8 @@
 }
 .dropdown-menu {
   min-width: 140px;
+}
+#JumboBackground {
+  background-color: green;
+  margin-bottom: 15px;
 }
