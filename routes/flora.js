@@ -25,12 +25,17 @@ router.route('/')
   	flora.name = req.body.name || 'none';
   	flora.category = req.body.category || 'none';
   	flora.season = req.body.season || 'none';
-  	flora.latlong = '46.8615808,-113.9813174';
+    flora.description = req.body.description || 'none';
+  	flora.lat = req.body.lat;
+    flora.lng = req.body.lng;
+    flora.isPrivate = req.body.isPrivate;
+    console.log(flora);
     flora.save(function(err, flora){
   	  if(err){
   		res.send(err);
   	  } else {
-  		res.json(flora);
+        console.log(flora);
+  		  res.json(flora);
   	  }
     })
   });
@@ -54,7 +59,8 @@ router.route('/:flora_id')
   	  	flora.name = req.body.name || flora.name;
   	    flora.category = req.body.category || flora.category;
   	    flora.season = req.body.season || flora.season;
-  	    flora.latlong = '46.8615808,-113.9813174';
+        flora.lat = '46.8615808';
+        flora.lng = '-113.9813174';
 
   	    flora.save(function(err){
   	      if(err){

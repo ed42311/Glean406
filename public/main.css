@@ -1,9 +1,34 @@
 .navbar {
-	background-color: #7FFF00;
+  background-color: #7FFF00;
+}
+#description {
+  margin: 10px 25px 35px 25px;
+}
+.navbar a:hover {
+  color: blue !important;
+}
+#describetext {
+  font-size: 24px;
+  margin-top: 20px;
+}
+#questionform {
+  margin-left: 25px;
+  margin-right: 25px;
+}
+#forageForm, #map {
+  margin: 0 25px 0 25px;
+}
+#forageForm {
+  margin-bottom: 35px;
 }
 .sizer1 img {
 	max-height: 50%;
 	max-width: 50%;
+  background-color: #7FFF00;
+} 
+#huck {
+  max-height: 37%;
+  max-width: 37%;
 }
 #morel {
 	max-height: 26%;
@@ -13,17 +38,30 @@
 	max-height: 30%;
 	max-width: 30%;
 }
-.sizer2 img{
+#chantrelle {
 	max-height: 29%;
 	max-width: 29%;
 }
 #chive {
+<<<<<<< HEAD
 	max-height: 33%;
 	max-width: 33%;
 }
 .sizer3 img{
 	max-height: 33%;
 	max-width: 33%;
+=======
+  max-height: 32%;
+  max-width: 32%;
+}
+#cactus {
+  max-height: 29%;
+  max-width: 29%;
+}
+#onion {
+  max-height: 33%;
+  max-width: 33%;
+>>>>>>> ec7ce663c606476c7d7991b7b117865046687c71
 }
 #straw{
 	max-height: 29%;
@@ -32,4 +70,171 @@
 #apple{
 	max-height: 29%;
 	max-width: 29%;
+}
+
+#map { 
+  height: 600px;
+  width: 600px;
+}
+
+.login-bg {
+    background-color: rgba(242,245,242,1);
+}
+
+.login-wrapper{
+    border-radius: 5px;
+    width: 45%;
+    box-shadow: rgba(0,0,0,0.3) 5px 6px 10px;
+    background-color: #EEE;
+    border-color: #e5e5e5;
+    margin-top: 5vh;
+}
+
+.login-logo {
+    width: 80%;
+}
+
+.login-logoWrapper {
+    background-color: #f9f9f9;
+    margin: -20px;
+    padding-top: 30px;
+    padding-bottom: 50px;
+        margin-bottom: 30px;
+    border: rgba(32,32,32,0.075) solid 1px;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    -webkit-clip-path: polygon(66% 90%, 100% 90%, 100% 0, 0 0, 0 90%, 33% 90%, 50% 100%);
+    clip-path: polygon(66% 90%, 100% 90%, 100% 0, 0 0, 0 90%, 33% 90%, 50% 100%);
+}
+
+.login-input{
+    box-shadow: rgba(32,32,32,0.4) 1.5px 1.5px 3px;
+}
+
+.login-active-left {
+  border-right: none;
+  border-color: #DDB476 !important;
+  box-shadow: inset 0 1px 1px rgba(0,0,0,0.075),0 0 8px rgba(221,180,118,0.6) !important;
+}
+
+.login-active-right {
+  border-left: none;
+  border-color: #DDB476 !important;
+  box-shadow: inset 0 1px 1px rgba(0,0,0,0.075),0 0 8px rgba(221,180,118,0.6) !important;
+}
+
+#userInfo:first-child{
+  margin-top: 50px;
+}
+
+.login-input-wrapper{
+    transition: all .26s;
+    transform: scale(1);
+}
+
+.login-input-wrapper-scaled{
+    transition: all .26s;
+    transform: scale(1.05);
+}
+
+.login-input-wrapper:hover{
+    transition: all .26s;
+    transform: scale(1.05);
+}
+
+.login-submit {
+    margin-top: 50px;
+    border-radius: 2px;
+    box-shadow: rgba(32,32,32,.2) 2px 2px 2px;
+    width: 95%;
+    outline: none;
+    border-color: transparent;
+    transition: background-color .4s;
+}
+
+.login-submit:focus {
+    outline: none;
+    border: none;
+}
+
+.login-submit:hover {
+    border-color: transparent;
+    background-color: #7FFF00;
+    color: #f9f9f9 !important;
+    transition: background-color color .4s;
+}
+
+
+.section-left, .section-right {
+  position: absolute;
+  top: 0;
+  width: 50%;
+  height: 100vh;
+  background-color: #323232;
+  z-index: 999;
+}
+
+.section-left {
+  left: 0;
+}
+
+.section-right {
+  right: 0;
+}
+
+#loader-wrapper {
+  display: block;
+    margin-right: auto;
+    width: 500px;
+    margin-left: auto;
+}
+
+#loader {
+  margin-left: 140px;
+  position: absolute;
+  color: #fff;
+  top: 20vh;
+  z-index: 10000;
+}
+
+#loader div {
+  display: inline-block;
+  text-align: center;
+  font-size: 230px;
+  margin-right: 50px;
+  width: 0px;
+  margin-left: 10px;
+}
+#mapRow {
+  align-content: center;
+}
+#category {
+  width: 170px;
+  text-align: center;
+}
+@media only screen and (max-width: 600px) {
+    #map {
+        align-content: center;
+        height: 320px;
+        width: 320px;
+    }
+}
+@media only screen and (max-width: 600px) {
+    #ForageText {
+        text-align: center;
+    }
+}
+@media only screen and (max-width: 600px) {
+    #HeadText {
+        text-align: center;
+    }
+}
+#ForageText {
+  text-align: center;
+}
+.hideMe {
+  display: none;
+}
+.dropdown-menu {
+  min-width: 140px;
 }

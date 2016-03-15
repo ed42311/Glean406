@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+<<<<<<< HEAD
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -54,3 +55,44 @@
 <script src="app.js"></script>
 
 </html>
+=======
+
+	<title>About/Contact</title>
+	<%- include ./navbar.ejs %>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+		<link rel="stylesheet" type="text/css" href="main.css">
+</head>
+<body>
+  <div id="description">
+  <h1>Our Story</h1>
+  <div id="describetext">
+  <p>This project began when three students in the Montana Code School envisioned an app that would allow Missoula community members to share their knowledge of local food sources within the natural environment. We hope that this technology will help Missoulians reconnect with nature and share their enthusiasm for foraging.</p>
+  <p>Using this app, you’ll be able to post known foraging spots so that other community members can utilize them. You have the choice to keep your preferred locations vague rather than share them with everyone (though we encourage the latter!).</p>
+  <p>Happy Foraging!  - Jere, Lars, and Charlie</p>
+  </div>
+  </div>
+  <div>
+  <div class="jumbotron">
+  <form id="questionform" action="" method="POST" role="form">
+   <legend>Ask a Question</legend>
+  	<div class="form-group">
+  		<input type="text" class="form-control" id="" placeholder="Type your question here.">
+  	</div>
+  
+  	<button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+  </div>
+  </div>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.14.7/react.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.14.7/react-dom.js"></script>
+	   <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBgbJrD_jtCPYZxXArPlJg68YYxFqEJ2QM
+        &libraries=visualization&callback=initMap">
+    </script>
+    <script src="https://code.jquery.com/jquery-2.2.0.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <script type="text/babel" src="reactMap.js"> </script>
+
+</html>
+>>>>>>> ec7ce663c606476c7d7991b7b117865046687c71

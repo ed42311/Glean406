@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <%- include ./navbar.ejs %>
+    <title>Forage!</title>
+      <script src="https://cdn.firebase.com/js/client/2.2.1/firebase.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link href="bootstrap-switch.css" rel="stylesheet">
+    <link rel="stylesheet" href="main.css">
+     <style type="text/css">
+      html, body { height: 100%; margin: 0; padding: 0; }
+      #map { height: 100%; }
+    </style> 
+  
+  </head>
+  <body>
+    <form role="form" id="forageForm">
+      <legend>Submit a Forage spot</legend>
+    
+      <div class="form-group">
+        <label for="">Name</label>
+        <input type="text" class="form-control" id="name" placeholder="">
+      </div>
+
+      <div>
+       <label for="sel1">Categories</label>
+        <select id="cat" class="form-control">
+         <option>Please select a Category...</option>
+         <option value="berries">Berries</option>
+         <option value="fruits">Fruits</option>
+         <option value="fungi">Fungi</option>
+         <option value="herbs">Herbs</option>
+         <option value="rootVegetables">Root Vegetables</option>
+        </select>
+      </div>
+
+      <div>
+       <label for="sel1">Harvest Month</label>
+        <select id="season" class="form-control">
+         <option>Please select a Harvest Month...</option>
+         <option value="january">January</option>
+         <option value="february">February</option>
+         <option value="march">March</option>
+         <option value="april">April</option>
+         <option value="may">May</option>
+         <option value="june">June</option>
+         <option value="july">July</option>
+         <option value="august">August</option>
+         <option value="september">September</option>
+         <option value="october">October</option>
+         <option value="november">November</option>
+         <option value="december">December</option>
+        </select>
+      </div>
+
+      <div class="hideMe form-group">
+        <label for="">Latitude</label>
+        <input type="text" class="form-control" id="lat" placeholder="*Don't Worry, this will auto-populate, use map below*">
+      </div>
+
+      <div class="hideMe form-group">
+        <label for="">Longitude</label>
+        <input type="text" class="form-control" id="lng" placeholder="*Don't Worry, this will auto-populate, use map below*">
+      </div>
+
+      <div class="form-group">
+        <label for="">Description</label>
+        <textarea id="description" class="form-control" rows="3"></textarea>
+      </div>
+
+      <div  class="checkbox">
+        <label>
+          <input type="checkbox" id="cb">Click here to make location of foraged item slightly vague by giving the map a larger, more discrete icon.
+        </label>
+      </div>
+
+      <button id="submitForm" class="btn btn-primary">Submit</button>
+    </form>
+
+     <div id="map"></div>
+
+  <script src="https://code.jquery.com/jquery-2.2.0.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+  <script src="app.js"></script>
+  <script src="bootstrap-switch.js"></script>
+  <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBgbJrD_jtCPYZxXArPlJg68YYxFqEJ2QM
+        &libraries=visualization&callback=initMap">
+    </script>
+    
+<script src="mapstyles.js"></script>
+<script src="submitMap.js"></script>
+
+
+  </body>  
+</html>

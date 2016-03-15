@@ -5,8 +5,10 @@ var FloraSchema = new Schema({
   name: String,
   category: String,
   season: String,
-  latlong: String
-  // comments: [{type: mongoose.Schema.Types.ObjectId, ref: 'Comment'}]
+  isPrivate: {type: Boolean, default: false},
+  lat: String,
+  lng: String,
+  comments: [{type: mongoose.Schema.Types.ObjectId, ref: 'Comment'}]
 });
 
 module.exports = mongoose.model('Flora', FloraSchema);

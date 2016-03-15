@@ -6,12 +6,14 @@
   "dependencies": {
     "bcrypt-nodejs": "0.0.3",
     "body-parser": "^1.15.0",
+    "connect-flash": "^0.1.1",
     "dot": "^1.0.3",
     "dotenv": "^2.0.0",
     "ejs": "^2.4.1",
     "env": "0.0.2",
     "express": "^4.13.4",
     "express-session": "^1.13.0",
+    "google-map-react": "^0.10.5",
     "mongoose": "^4.4.6",
     "passport": "^0.3.2",
     "passport-local": "^1.0.0"
