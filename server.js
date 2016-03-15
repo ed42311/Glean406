@@ -10,6 +10,7 @@ var floraRoutes = require('./routes/flora');
 var userRoutes = require('./routes/user');
 var session = require('express-session');
 var flash = require('connect-flash');
+
 app.use(express.static('public'));
 
 app.set('view engine', 'ejs');

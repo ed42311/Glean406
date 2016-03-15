@@ -4,7 +4,6 @@
 		<%- include ./navbar.ejs %>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 		<link rel="stylesheet" type="text/css" href="main.css">
-<<<<<<< HEAD
 	 	<style type="text/css">
       		html, body { 
       		height: 100%; 
@@ -14,75 +13,13 @@
 					         width: 600px;
       		}
     </style>
-=======
     <meta name="viewport" content="width=device-width, initial-scale=1">
->>>>>>> ec7ce663c606476c7d7991b7b117865046687c71
 </head>
 <body>
 <div class="container">
   <h1 id="HeadText"> Forage Missoula: Know the Area Through Our Diverse Natural Foods</h1>
   <div id="myCarousel" class="carousel slide" data-ride="carousel">
   <!-- Indicators -->
-<<<<<<< HEAD
-  <ol class="carousel-indicators">
-    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-    <li data-target="#myCarousel" data-slide-to="1"></li>
-    <li data-target="#myCarousel" data-slide-to="2"></li>
-    
-  </ol>
-
-  <div class="jumbotron"> 
-    <div class="carousel-inner" role="listbox">
-      <div class="item active">
-        <div class="sizer1">
-         <img src="http://www.goodlifer.com/wp-content/uploads/2010/01/wildhuckleberry.jpg" alt="Huckleberries">
-         <img id="morel" src="https://wildfoodism.files.wordpress.com/2015/04/morelmushroomwildfoodism.jpg" alt="Morel Mushrooms">
-          <img id="rosemary" src="https://s-media-cache-ak0.pinimg.com/736x/c3/4b/c7/c34bc7714100a0273eec0bdcfc8da351.jpg" alt="Rosemary">
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="sizer2">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/9/9a/Chanterelle_Cantharellus_cibarius.jpg" alt="Chantrelles">
-          <img id="chive" src="http://ian.umces.edu/imagelibrary/albums/userpics/10046/normal_iil-lholbrook-0003.JPG" alt="Chives">
-          <img src="https://upload.wikimedia.org/wikipedia/en/f/f9/Prickly_pear_cactus_beed.jpg" alt="Prickly Pear">
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="sizer3">
-          <img src="http://www.carolinacreations.biz/newsletter/wp-content/uploads/2011/11/wildonion.jpg" alt="Onions">
-          <img id="apple" src="https://cookiecrumbstoliveby.files.wordpress.com/2013/09/dscn1922.jpg" alt="Apples">
-          <img id="straw" src="https://natureexplorers.files.wordpress.com/2011/05/istock_wild-strawberries.jpg" alt="strawberry">
-        </div>
-      </div>
-    </div>
-  </div>
-
-    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-      <span class="sr-only">Previous</span>
-    </a>
-    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-      <span class="sr-only">Next</span>
-    </a>
-
-
-    <!-- Left and right controls -->
-    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-      <span class="sr-only">Previous</span>
-    </a>
-    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-      <span class="sr-only">Next</span>
-    </a>
-  </div>
-
-   <div id="map"></div>
-
-=======
     <ol class="carousel-indicators">
       <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
       <li data-target="#myCarousel" data-slide-to="1"></li>
@@ -129,25 +66,29 @@
     <div class="col-md-3" id="ForageText">
       <h2>Explore Missoula's Foraging Opportunities</h2>
         <ul><h4>Please follow these simple guidelines and everyone will stay happy and healthy:</h4>
-          <li>Please don't take from private land without permission</li>
-          <li>Don't post a location on private land without their permission</li>
-          <li>We accept no responsibility for plant identification of any posts by users</li>
+          <li><h5>Please don't take from private land without permission</h5></li>
+          <li><h5>Don't post a location on private land without their permission</h5></li>
+          <li><h5>We accept no responsibility for plant identification of any posts by users</h5></li>
         </ul>
     </div>
     <div class="col-md-6" id="map"></div>
     <div class="col-md-3" id="category">
       <h4>Filter By Categories</h4>
-      <select class="form-control">
+      <select class="form-control" id="categoryControl">
+        <option>All</option>
         <option>Berries</option>
         <option>Fruits</option>
         <option>Fungi</option>
         <option>Herbs</option>
         <option>Root Vegetables</option>
       </select>
-    </div>
+      <div class="form-group row">
+        <input type="text" class="form-control" placeholder="Search" id="searchText">
+      </div>
+      <input type="submit" class="btn btn-default" id="searchButton">Search</input>
+    </div>  
   </div>
 </div>
->>>>>>> ec7ce663c606476c7d7991b7b117865046687c71
 
 </body>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.14.7/react.js"></script>

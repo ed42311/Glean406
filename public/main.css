@@ -98,7 +98,10 @@
   width: 600px;
   margin: auto;
 }
-
+.SubmitMap { 
+  height: 600px;
+  width: 600px;
+}
 .login-bg {
     background-color: rgba(242,245,242,1);
 }
@@ -257,6 +260,7 @@
 }
 #ForageText {
   text-align: center;
+  margin-left: 0px;
 }
 .hideMe {
   display: none;
