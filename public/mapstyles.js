@@ -29,4 +29,3 @@ var mapStyles = [{
   },
 ];
 
-module.exports = mapStyles;
