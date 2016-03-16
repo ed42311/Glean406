@@ -90,6 +90,27 @@
   </div>
 </div>
 
+
+
+
+
+<% if(user.local) { %>
+<form action="http://maps.google.com/maps" method="get" target="_blank">
+   <label for="saddr">Enter your location</label>
+   <input type="text" name="saddr" />
+   <input type="text" name="daddr" value=/>
+<!--    <input type="hidden" name="daddr" value="22 Campus Dr, Missoula, MT 59801 (UM Campus: University Center)" /> -->
+   <input type="submit" value="Get directions" />
+</form>
+<% } %>
+
+
+
+
+
+
+
+
 </body>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.14.7/react.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.14.7/react-dom.js"></script>
