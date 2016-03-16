@@ -5,7 +5,6 @@
     <title>Forage!</title>
       <script src="https://cdn.firebase.com/js/client/2.2.1/firebase.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-    <link href="bootstrap-switch.css" rel="stylesheet">
     <link rel="stylesheet" href="main.css">
      <style type="text/css">
       html, body { height: 100%; margin: 0; padding: 0; }
@@ -13,7 +12,7 @@
     </style> 
   
   </head>
-  <body id="bg">
+  <body>
     <form role="form" id="forageForm">
       <legend>Submit a Forage location</legend>
     
@@ -76,21 +75,22 @@
 
       <button id="submitForm" class="btn btn-primary">Submit</button>
     </form>
-
-     <div id="map"></div>
-    
+      <span class="myMap">
+      <div id="map">
+      </div>
+      </span>
+</body> 
+ 
   <script src="https://code.jquery.com/jquery-2.2.0.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
   <script src="app.js"></script>
-  <script src="bootstrap-switch.js"></script>
   <script async defer
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBgbJrD_jtCPYZxXArPlJg68YYxFqEJ2QM
         &libraries=visualization&callback=initMap">
-    </script>
-    
-<script src="mapstyles.js"></script>
-<script src="submitMap.js"></script>
+  </script>
+  <script src="mapstyles.js"></script>
+  <script src="submitMap.js"></script>
 
 
-  </body>  
+   
 </html>

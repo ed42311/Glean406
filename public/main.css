@@ -30,7 +30,7 @@
 #forageForm legend {
   font-size: 24px;
 }
-#forageForm, #map {
+#forageForm {
   margin: 0 25px 0 25px;
 }
 #forageForm {
@@ -46,7 +46,12 @@
 	max-height: 50%;
 	max-width: 50%;
   background-color: #7FFF00;
-} 
+}
+.myMap > #map {
+  height: 600px;
+  width: 600px;
+}
+
 #huck {
   max-height: 37%;
   max-width: 37%;
@@ -97,10 +102,6 @@
   height: 600px;
   width: 600px;
   margin: auto;
-}
-.SubmitMap { 
-  height: 600px;
-  width: 600px;
 }
 .login-bg {
     background-color: rgba(242,245,242,1);
@@ -184,7 +185,7 @@
 
 .login-submit:hover {
     border-color: transparent;
-    background-color: #7FFF00;
+    background-color: green;
     color: #f9f9f9 !important;
     transition: background-color color .4s;
 }
@@ -268,14 +269,42 @@
 .dropdown-menu {
   min-width: 140px;
 }
-#JumboBackground {
+#jumbo {
   background-color: green;
-  margin-bottom: 15px;
+  padding-right: 15px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 15px;
+  border-radius: 15px;
+  width: 100%;
 }
 #bg {
-  background-color: #d6c18c;
+  background-color: white;
+}
+
+#left {
+  border-radius: 15px;
+}
+#right {
+  border-radius: 15px;
+
 }
 #navTitle {
   font-size: 25px;
-  font-weight: 500;
+  font-weight: 300;
+}
+#spread {
+  padding: 40px;
+  margin-right: 40px;
+}
+#relative {
+  position: relative;
+}
+.carousel-inner {
+  position: relative;
+  width: 107%;
+  overflow: hidden;
+}
+.centerText {
+  text-align: center;
 }
