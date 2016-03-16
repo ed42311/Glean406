@@ -14,7 +14,8 @@ function initMap() {
       featureType: 'transit.station',
       stylers: [{ visibility: 'off' }]  // Turn off bus stations, train stations, etc.
     }],
-    disableDoubleClickZoom: true
+    scrollwheel: false,
+    disableDoubleClickZoom: false
   })
 
 

@@ -272,3 +272,10 @@
   background-color: green;
   margin-bottom: 15px;
 }
+#bg {
+  background-color: #d6c18c;
+}
+#navTitle {
+  font-size: 25px;
+  font-weight: 500;
+}

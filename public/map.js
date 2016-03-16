@@ -12,7 +12,8 @@ function initMap(category, searchText) {
       featureType: 'transit.station',
       stylers: [{ visibility: 'off' }]  // Turn off bus stations, train stations, etc.
     }],
-    disableDoubleClickZoom: true
+    disableDoubleClickZoom: false,
+    scrollwheel: false
   });
 
   getFlora(map, category, searchText);
