@@ -37,9 +37,9 @@
           <ul class="dropdown-menu">
             <li><a href="/login">Login</a></li>
             <li><a href="/signup">Register</a></li>
-            
+              <% if(user.local) { %>
               <li><a href="/submitForage">New Post</a></li>
-            
+              <% } %>
             <li><a href="/logout">Logout</a></li>
           </ul>
         </li>
@@ -48,7 +48,5 @@
   </div>
 </nav>
 
-              <% if(user.local) { %>
-              <% } %>
 </body>
 </html>
