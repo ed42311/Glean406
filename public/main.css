@@ -1,3 +1,6 @@
+.form-group {
+  margin: .5em 0 0 0;
+}
 .navbar {
   background-color: green;
 }
@@ -30,17 +33,18 @@
 #forageForm legend {
   font-size: 24px;
 }
-#forageForm, #map {
-  margin: 0 25px 0 25px;
-}
 #forageForm {
   margin: 35px auto 35px auto;
   width: 800px;
 }
 #ForageText {
   font-size: 24px !important;
-  margin-left: 125px;
+  font-family: 'Trebuchet MS';
   width: 300px;
+}
+#searchBar {
+  margin-left: 0;
+  margin-right: 0;
 }
 .sizer1 img {
 	max-height: 50%;
@@ -64,14 +68,12 @@
 	max-width: 29%;
 }
 #chive {
-<<<<<<< HEAD
 	max-height: 33%;
 	max-width: 33%;
 }
 .sizer3 img{
 	max-height: 33%;
 	max-width: 33%;
-=======
   max-height: 32%;
   max-width: 32%;
 }
@@ -82,7 +84,6 @@
 #onion {
   max-height: 33%;
   max-width: 33%;
->>>>>>> ec7ce663c606476c7d7991b7b117865046687c71
 }
 #straw{
 	max-height: 29%;
@@ -231,7 +232,7 @@
   margin-left: 10px;
 }
 #mapRow {
-  align-content: center;
+  align-content: center !important;
 }
 #category {
   width: 285px;
