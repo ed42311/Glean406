@@ -20,7 +20,6 @@ function initMap(category, searchText) {
 }
 
 function getFlora(map, category, searchText){
-  console.log('got to this point');
 
   $.ajax({
     url: "/api/flora",
@@ -81,10 +80,7 @@ function getFlora(map, category, searchText){
         infowindow.open(map, floraMarker);
       });
     });
-
   });
-
-  console.log('after done');
 };
 
 $('#categoryControl').change(function() {
