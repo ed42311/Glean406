@@ -20,12 +20,17 @@
   font-weight: 600 ; 
 }
 #description {
-  margin: auto;
+  text-align: center;
   padding: 0 25px 0 25px;
+  font-family: 'Lora', serif;
+  font-weight: 600 ;
 }
 #describetext {
+  text-align: left;
   font-size: 24px;
   margin-top: 20px;
+  font-family: 'Lora', serif;
+  font-weight: 400 ;
 }
 #questionform {
   margin: 0 20px 0 20px;
@@ -298,6 +303,8 @@
 }
 .centerText {
   text-align: center;
+  font-family: 'Lora', serif;
+  font-weight: 600 ;
 }
 h1, h2, h3, h4, h5 { 
   font-family: 'Lora', serif;
@@ -315,3 +322,32 @@ h1, h2, h3, h4, h5 {
   font-family: 'Lora', serif;
   font-weight: 600 ; 
 }
+#userName {
+  font-family: 'Lora', serif;
+  font-weight: 600 ; 
+}
+#userPw {
+  font-family: 'Lora', serif;
+  font-weight: 600 ; 
+}
+#submitButton {
+  font-family: 'Lora', serif;
+  font-weight: 600 ;
+}
+#signIn {
+  font-family: 'Lora', serif;
+  font-weight: 600 ;
+}
+#submitContainer {
+  height: 500px;
+  width: 700px;
+  font-family: 'Lora', serif;
+  font-weight: 600 ;
+}
+#location {
+    border-bottom-width: 0px;
+}
+
+
+
+
