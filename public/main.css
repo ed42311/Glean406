@@ -232,7 +232,7 @@
   margin-left: 10px;
 }
 #mapRow {
-  align-content: center;
+  text-align: center;
 }
 #category {
   width: 285px;
@@ -244,8 +244,8 @@
 @media only screen and (max-width: 600px) {
     #map {
         align-content: center;
-        height: 320px;
-        width: 320px;
+        height: 320px !important;
+        width: 320px !important;
         margin: auto;
     }
 }

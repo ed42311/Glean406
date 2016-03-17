@@ -47,7 +47,6 @@ function getFlora(map, category, searchText){
                    <p> <h5>' + "Description: " + flora.description + '<h5> </p>\
                  </div>');
                  
-
       var infowindow = new google.maps.InfoWindow({
         content: contentString
       });
