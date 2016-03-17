@@ -15,6 +15,9 @@
 }
 #HeadText {
   text-align: center;
+  font-size: 32px;
+  font-family: 'Lora', serif;
+  font-weight: 600 ; 
 }
 #description {
   margin: auto;
@@ -29,18 +32,16 @@
 }
 #forageForm legend {
   font-size: 24px;
-}
-#forageForm {
-  margin: 0 25px 0 25px;
-}
-#forageForm {
-  margin: 35px auto 35px auto;
+/*  margin: 0 25px 0 25px;
+*/  margin: 35px auto 35px auto;
   width: 800px;
 }
 #ForageText {
   font-size: 24px !important;
-  margin-left: 125px;
-  width: 300px;
+/*  margin-left: 125px;
+*/  width: 300px;
+  text-align: center;
+  margin-left: 0px;
 }
 .sizer1 img {
 	max-height: 50%;
@@ -69,25 +70,20 @@
 	max-width: 29%;
 }
 #chive {
-<<<<<<< HEAD
 	max-height: 33%;
 	max-width: 33%;
-}
-.sizer3 img{
-	max-height: 33%;
-	max-width: 33%;
-=======
-  max-height: 32%;
-  max-width: 32%;
 }
 #cactus {
   max-height: 29%;
   max-width: 29%;
 }
+.sizer3 img{
+	max-height: 33%;
+	max-width: 33%;
+}
 #onion {
   max-height: 33%;
   max-width: 33%;
->>>>>>> ec7ce663c606476c7d7991b7b117865046687c71
 }
 #straw{
 	max-height: 29%;
@@ -97,7 +93,6 @@
 	max-height: 29%;
 	max-width: 29%;
 }
-
 #map { 
   height: 600px;
   width: 600px;
@@ -259,10 +254,6 @@
         text-align: center;
     }
 }
-#ForageText {
-  text-align: center;
-  margin-left: 0px;
-}
 .hideMe {
   display: none;
 }
@@ -307,4 +298,20 @@
 }
 .centerText {
   text-align: center;
+}
+h1, h2, h3, h4, h5 { 
+  font-family: 'Lora', serif;
+  font-weight: 600 ; 
+}
+#searchButton {
+  font-family: 'Lora', serif;
+  font-weight: 600 ; 
+}
+#searchText {
+  font-family: 'Lora', serif;
+  font-weight: 600 ; 
+}
+#categoryControl {
+  font-family: 'Lora', serif;
+  font-weight: 600 ; 
 }
