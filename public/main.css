@@ -1,4 +1,6 @@
 .navbar {
+  font-family: 'Lora', serif;
+  font-weight: 600 ;
   background-color: green;
 }
 .navbar a {
@@ -6,6 +8,10 @@
 }
 .navbar a:hover {
   color: #A52A2A !important;
+}
+#forageTitle {
+    font-family: 'Lora', serif;
+  font-weight: 600 ;
 }
 .container {
   margin: auto;
@@ -226,8 +232,8 @@
   width: 0px;
   margin-left: 10px;
 }
-#mapRow {
-  text-align: center;
+#catFilter {
+  width: 200px;
 }
 #category {
   width: 285px;
@@ -309,9 +315,17 @@ h1, h2, h3, h4, h5 {
 }
 #searchText {
   font-family: 'Lora', serif;
-  font-weight: 600 ; 
+  font-weight: 600 ;
+  width: 180px; 
+  align-content: center;
+  margin-left: 15px;
 }
 #categoryControl {
   font-family: 'Lora', serif;
-  font-weight: 600 ; 
+  font-weight: 600 ;
+  width: 180px; 
+  text-align: center;
+}
+.spacer50 {
+  height: 16px;
 }
