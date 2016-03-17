@@ -26,8 +26,7 @@
   font-weight: 600 ; 
 }
 #description {
-  text-align: center;
-  padding: 0 25px 0 25px;
+  padding: 0 1px 0 1px;
   font-family: 'Lora', serif;
   font-weight: 600 ;
 }
@@ -316,9 +315,13 @@ h1, h2, h3, h4, h5 {
   font-family: 'Lora', serif;
   font-weight: 600 ; 
 }
-#searchButton {
+#searchButton:hover {
   font-family: 'Lora', serif;
-  font-weight: 600 ; 
+  font-weight: 600 ;
+  border-color: transparent;
+  background-color: green;
+  color: #f9f9f9 !important;
+  transition: background-color color .4s;  
 }
 #searchText {
   font-family: 'Lora', serif;
@@ -346,7 +349,7 @@ h1, h2, h3, h4, h5 {
 }
 #submitButton {
   font-family: 'Lora', serif;
-  font-weight: 600 ;
+  font-weight: 600 ; 
 }
 #signIn {
   font-family: 'Lora', serif;
@@ -361,7 +364,11 @@ h1, h2, h3, h4, h5 {
 #location {
     border-bottom-width: 0px;
 }
-
-
+#indexReg:hover {
+    border-color: transparent;
+    background-color: green;
+    color: #f9f9f9 !important;
+    transition: background-color color .4s;
+}
 
 
