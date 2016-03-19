@@ -1,7 +1,32 @@
-.form-group {
-  margin: .5em 0 0 0;
+#container {
+display: block;
+height: 100px;
+align-content: center;
+}
+
+#tree1, #tree2, #tree3, #tree4, #tree5, #tree6, #tree7, #tree8, #tree9, #tree10 {
+  display: inline-flex;
+  position: center;
+  background-image: url('./images/tree.jpg');
+  top: 55px;
+  width: 80px;
+  height: 91px;
+  background-color: #000;
+  border-left-width: 30px;
+  border-right-width: 30px;
+
+}
+
+#line{
+  border-top-color: #fff;
+  border-top-width: 2px;
+  border-style: solid;
+  position: relative;
+  top: -10px;
 }
 .navbar {
+  font-family: 'Lora', serif;
+  font-weight: 600 ;
   background-color: green;
 }
 .navbar a {
@@ -9,6 +34,10 @@
 }
 .navbar a:hover {
   color: #A52A2A !important;
+}
+#forageTitle {
+    font-family: 'Lora', serif;
+  font-weight: 600 ;
 }
 .container {
   margin: auto;
@@ -18,14 +47,21 @@
 }
 #HeadText {
   text-align: center;
+  font-size: 32px;
+  font-family: 'Lora', serif;
+  font-weight: 600 ; 
 }
 #description {
-  margin: auto;
-  padding: 0 25px 0 25px;
+  padding: 0 1px 0 1px;
+  font-family: 'Lora', serif;
+  font-weight: 600 ;
 }
 #describetext {
+  text-align: left;
   font-size: 24px;
   margin-top: 20px;
+  font-family: 'Lora', serif;
+  font-weight: 400 ;
 }
 #questionform {
   margin: 0 20px 0 20px;
@@ -50,7 +86,12 @@
 	max-height: 50%;
 	max-width: 50%;
   background-color: #7FFF00;
-} 
+}
+.myMap > #map {
+  height: 600px;
+  width: 600px;
+}
+
 #huck {
   max-height: 37%;
   max-width: 37%;
@@ -81,6 +122,10 @@
   max-height: 29%;
   max-width: 29%;
 }
+.sizer3 img{
+	max-height: 33%;
+	max-width: 33%;
+}
 #onion {
   max-height: 33%;
   max-width: 33%;
@@ -93,15 +138,10 @@
 	max-height: 29%;
 	max-width: 29%;
 }
-
 #map { 
   height: 600px;
   width: 600px;
   margin: auto;
-}
-.SubmitMap { 
-  height: 600px;
-  width: 600px;
 }
 .login-bg {
     background-color: rgba(242,245,242,1);
@@ -185,7 +225,7 @@
 
 .login-submit:hover {
     border-color: transparent;
-    background-color: #7FFF00;
+    background-color: green;
     color: #f9f9f9 !important;
     transition: background-color color .4s;
 }
@@ -234,6 +274,9 @@
 #mapRow {
   align-content: center !important;
 }
+#catFilter {
+  width: 200px;
+}
 #category {
   width: 285px;
   text-align: center;
@@ -244,8 +287,8 @@
 @media only screen and (max-width: 600px) {
     #map {
         align-content: center;
-        height: 320px;
-        width: 320px;
+        height: 320px !important;
+        width: 320px !important;
         margin: auto;
     }
 }
@@ -259,24 +302,111 @@
         text-align: center;
     }
 }
-#ForageText {
-  text-align: center;
-  margin-left: 0px;
-}
 .hideMe {
   display: none;
 }
 .dropdown-menu {
   min-width: 140px;
 }
-#JumboBackground {
+#jumbo {
   background-color: green;
-  margin-bottom: 15px;
+  padding-right: 15px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 15px;
+  border-radius: 15px;
+  width: 100%;
 }
 #bg {
-  background-color: #d6c18c;
+  background-color: white;
+}
+
+#left {
+  border-radius: 15px;
+}
+#right {
+  border-radius: 15px;
+
 }
 #navTitle {
   font-size: 25px;
-  font-weight: 500;
+  font-weight: 300;
 }
+#spread {
+  padding: 40px;
+  margin-right: 40px;
+}
+#relative {
+  position: relative;
+}
+.carousel-inner {
+  position: relative;
+  width: 107%;
+  overflow: hidden;
+}
+.centerText {
+  text-align: center;
+  font-family: 'Lora', serif;
+  font-weight: 600 ;
+}
+h1, h2, h3, h4, h5 { 
+  font-family: 'Lora', serif;
+  font-weight: 600 ; 
+}
+#searchButton:hover {
+  font-family: 'Lora', serif;
+  font-weight: 600 ;
+  border-color: transparent;
+  background-color: green;
+  color: #f9f9f9 !important;
+  transition: background-color color .4s;  
+}
+#searchText {
+  font-family: 'Lora', serif;
+  font-weight: 600 ;
+  width: 180px; 
+  align-content: center;
+  margin-left: 15px;
+}
+#categoryControl {
+  font-family: 'Lora', serif;
+  font-weight: 600 ;
+  width: 180px; 
+  text-align: center;
+}
+.spacer50 {
+  height: 16px;
+}
+#userName {
+  font-family: 'Lora', serif;
+  font-weight: 600 ; 
+}
+#userPw {
+  font-family: 'Lora', serif;
+  font-weight: 600 ; 
+}
+#submitButton {
+  font-family: 'Lora', serif;
+  font-weight: 600 ; 
+}
+#signIn {
+  font-family: 'Lora', serif;
+  font-weight: 600 ;
+}
+#submitContainer {
+  height: 500px;
+  width: 700px;
+  font-family: 'Lora', serif;
+  font-weight: 600 ;
+}
+#location {
+    border-bottom-width: 0px;
+}
+#indexReg:hover {
+    border-color: transparent;
+    background-color: green;
+    color: #f9f9f9 !important;
+    transition: background-color color .4s;
+}
+
+

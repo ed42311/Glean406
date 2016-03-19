@@ -51,7 +51,6 @@ function initMap() {
 
       document.getElementById("lat").value = templat;
       document.getElementById("lng").value = templng;
-      alert("trying to drag");
 
     });
   });
@@ -64,7 +63,7 @@ function submitForm(e){
           var category = $( "#cat option:selected" ).text();
           var season = $( "#season option:selected" ).text();
           var description = document.getElementById("description").value;
-          var checkbox = ('#cb:checkbox:checked').length > 0
+          var checkbox = $('#cb').is(":checked");
           console.log(checkbox, "CHECKBODXXXXX")
 
 
@@ -84,11 +83,9 @@ function submitForm(e){
               data: data,
               type:'POST',
               success: function(response){
-                console.log("posting data!", data, response)
-                document.location='/'
+                document.location = '/'
               }.bind(this),
               error: function(xhr, status, err){
-                console.log("not posting data!")
                 console.error(this.props.url, status, err.toString());
               }.bind(this)
             })

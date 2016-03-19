@@ -3,30 +3,41 @@
 <head>
 	<title>About/Contact</title>
 	<%- include ./navbar.ejs %>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-		<link rel="stylesheet" type="text/css" href="main.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="main.css">
 </head>
-<body id="bg">
-  <div id="description">
+<body>
+<div id="description">
   <h1>Our Story</h1>
-  <div id="describetext">
-  <p>This project began when three students in the Montana Code School envisioned an app that would allow Missoula community members to share their knowledge of local food sources within the natural environment. We hope that this technology will help Missoulians reconnect with nature and share their enthusiasm for foraging.</p>
-  <p>Using this app, you’ll be able to post known foraging spots so that other community members can utilize them. You have the choice to keep your preferred locations vague rather than share them with everyone (though we encourage the latter!).</p>
-  <p>Happy Foraging!  - Jere, Lars, and Charlie</p>
+    <div id="describetext">
+      <p>&emsp;This project began when three students in the Montana Code School envisioned an app that would allow Missoula community members to share their knowledge of local food sources within the natural environment. We hope that this technology will help Missoulians reconnect with nature and share their enthusiasm for foraging.</p>
+      <p>&emsp;Using this app, you’ll be able to post known foraging spots so that other community members can utilize them. You have the choice to keep your preferred locations vague rather than share them with everyone (though we encourage the latter!).</p>
+      <p>&emsp;</p>
+      <p>&emsp;Happy Foraging!  - Jere, Lars, and Charlie</p>
+    </div>
+</div>
+<div class='navbar-static-bottom'>
+  <div class='container-fluid'>
+    <div class='row features'>
+      <div class='center'>
+        <h1 class="centerText">Contact</h1>
+        <div class="centerText">   
+          <span class="fa-stack fa-lg" id="spread">
+              <a href="https://github.com/superman76/forager" target="_blank">
+              <i class="fa fa-github fa-3x"></i>
+              </a>
+          </span>
+          <span class="fa-stack fa-lg" id="spread">
+              <a href="mailto:foragemissoula@gmail.com">
+              <i class="fa fa-envelope fa-3x"></i>
+              </a>
+          </span>
+        </div>  
+      </div>
+    </div>
   </div>
-  </div>
-  <div id="questionbox">
-  <div class="jumbotron">
-  <form id="questionform" action="" method="POST" role="form">
-   <legend>Ask a Question</legend>
-  	<div class="form-group">
-  		<input type="text" class="form-control" id="" placeholder="Type your question here.">
-  	</div>
-  
-  	<button type="submit" class="btn btn-primary">Submit</button>
-  </form>
-  </div>
-  </div>
+</div>
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.14.7/react.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.14.7/react-dom.js"></script>

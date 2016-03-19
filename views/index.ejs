@@ -1,25 +1,83 @@
 <!DOCTYPE html>
 <html>
 <head>
-		<%- include ./navbar.ejs %>
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-		<link rel="stylesheet" type="text/css" href="main.css">
-	 	<style type="text/css">
-      		html, body { 
-      		height: 100%; 
-      		margin: 0; 
-      		padding: 0; }
-      		#map { 	height: 600px;
-					         width: 600px;
-      		}
-    </style>
+  <title id='forageTitle'>Forage Missoula</title>
+    <%- include ./navbar.ejs %>
+    
+    <meta charset="utf-8" />
+
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link href='https://fonts.googleapis.com/css?family=Lora' rel='stylesheet' type='text/css'>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script type="text/javascript" src="https://secure-ds.serving-sys.com/BurstingcachedScripts/libraries/greensock/1_18_0/TweenMax.min.js"></script>
+    
+    <link rel="stylesheet" type="text/css" href="main.css">
 </head>
 <body id="bg">
 
 <div id="bigIndex">
+<body>
+
+<!--     <div id="container">
+
+          <div id="tree1">
+          </div>
+
+          <div id="tree2">
+          </div>
+
+          <div id="tree3">
+          </div>
+
+          <div id="tree4">
+          </div> 
+
+          <div id="tree5">
+          </div>
+
+          <div id="tree6">
+          </div>
+
+          <div id="tree7">
+          </div>
+
+          <div id="tree8">
+          </div>
+
+          <div id="tree9">
+          </div>
+
+          <div id="tree10">
+          </div>
+
+      </div>
+
+      <div id="line">
+      </div>
+
+    <script>
+
+      function transform(){
+        TweenMax.staggerTo(['#tree1','#tree2', '#tree3','#tree4','#tree5','#tree6','#tree7','#tree8','#tree9','#tree10'], 4, {y: -90, ease: Power1.easeOut})
+      }
+
+      $('#button').onStart(function(){
+        transform();
+      });
+
+
+
+    </script> -->
+
+
+
+
+
 <div class="container">
-  <h1 id="HeadText"> Forage Missoula: Know the Area Through Our Diverse Natural Foods</h1>
+  <h1 id="HeadText">Forage Missoula: Know the Area Through Our Diverse Natural Foods</h1>
   <div id="myCarousel" class="carousel slide" data-ride="carousel">
   <!-- Indicators -->
     <ol class="carousel-indicators">
@@ -27,7 +85,7 @@
       <li data-target="#myCarousel" data-slide-to="1"></li>
       <li data-target="#myCarousel" data-slide-to="2"></li>
     </ol>
-    <div class="jumbotron" id="JumboBackground"> 
+    <div class="jumbotron" id="jumbo"> 
       <div class="carousel-inner" role="listbox">
         <div class="item active">
           <div class="sizer1">
@@ -53,27 +111,32 @@
       </div>  
     </div>      
   <!-- Left and right controls -->
-    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev" id="left">
       <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
       <span class="sr-only">Previous</span>
     </a>
-    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next" id="right">
       <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
       <span class="sr-only">Next</span>
     </a>
   </div>    
 </div>
-<div class="container-fluid">
-  <div class="row" id="mapRow">
-    <div class="col-md-3" id="ForageText">
-        <ul><h4>Please follow these simple guidelines and everyone will stay happy and healthy:</h4>
-          <li><h5>Please don't take from private land without permission</h5></li>
-          <li><h5>Don't post a location on private land without their permission</h5></li>
-          <li><h5>We accept no responsibility for plant identification of any posts by users</h5></li>
-        </ul>
+
+
+<div class="container">
+  <div class="row row centered" id="mapRow">
+    
+    <div class="col-xs-3 col-centered" id="ForageText">
+      <ul><h3>Please follow these simple guidelines and everyone will stay happy and healthy:</h3>
+        <li><h4>Please don't take from private land without permission</h4></li>
+        <li><h4>Don't post a location on private land without their permission</h4></li>
+        <li><h4>We accept no responsibility for plant identification of any posts by users</h4></li>
+      </ul>
     </div>
-    <div class="col-md-6" id="map"></div>
-    <div class="col-md-3" id="category">
+    
+    <div class="col-xs-6 col-centered" id="map"></div>
+    
+    <div class="col-xs-3 col-centered" id='catFilter'>
       <h4>Filter By Categories</h4>
       <select class="form-control" id="categoryControl">
         <option>All</option>
@@ -83,15 +146,22 @@
         <option>Herbs</option>
         <option>Root Vegetables</option>
       </select>
+      <div class="spacer50"></div>
       <div class="form-group row">
         <input type="text" class="form-control" placeholder="Search" id="searchText">
       </div>
       <input type="submit" class="btn btn-default" id="searchButton"></input>
+      
+      <div class="container" id="signuptextbutton">
+        <h3>Sign up now to be able to post new Forage spots!</h3>
+        <a id="indexReg" class="btn btn-large btn-block btn-default" href="/signup" role="button">Register Now</a>
+      </div>
+
     </div>  
+  
   </div>
 </div>
 </div>
-
 </body>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.14.7/react.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.14.7/react-dom.js"></script>
