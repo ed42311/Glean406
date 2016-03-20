@@ -2,6 +2,9 @@ var templat;
 var templng;
 
 function initMap(category, searchText) {
+
+
+
   var map = new google.maps.Map(document.getElementById('map'), {
     center: {lat: 46.86077911287492, lng: -113.99279092176516},
     zoom: 8,
@@ -39,15 +42,21 @@ function getFlora(map, category, searchText){
     }) : filterData;
     filterSearch.forEach(function(flora) {
       
+      // var directions = ("<a href="https://www.google.com/maps/dir/Current+Location/"+ "flora.lat" + "," + "flora.lng" + """ + ">" + ")
+
       var contentString = ('<div id=' + flora.name + '>\
                    <p> <h3>' + flora.name + '</h3> </p>\
                    <p> <h5>' + "Harvest Season: " + flora.season + '<h5> </p>\
                    <p> <h5>' + "Type: " + flora.category + '<h5> </p>\
                    <p> <h5>' + "Description: " + flora.description + '<h5> </p>\
+                   <p> <h5>' + "<button><a href=https://www.google.com/maps/dir/Current+Location/" + flora.lat + "," + flora.lng + " target=_blank>Get Directions </a></button>" +'<h5> </p>\
                  </div>');
-                 
+
+                   // <p> <h5>' + "<a role="button" class="btn btn-large btn-block btn-default" href=https://www.google.com/maps/dir/Current+Location/" + flora.lat + "," + flora.lng + " target=_blank>Get Directions</a>" +'<h5> </p>\
+
+
       var infowindow = new google.maps.InfoWindow({
-        content: contentString
+        content: contentString,
       });
       
       var image = 'http://carma.org/images/icons/icon_circle_red_2.gif';

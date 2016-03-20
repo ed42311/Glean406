@@ -3,12 +3,76 @@
 <head>
   <title id='forageTitle'>Forage Missoula</title>
     <%- include ./navbar.ejs %>
+    
+    <meta charset="utf-8" />
+
+
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     <link href='https://fonts.googleapis.com/css?family=Lora' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="main.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script type="text/javascript" src="https://secure-ds.serving-sys.com/BurstingcachedScripts/libraries/greensock/1_18_0/TweenMax.min.js"></script>
+    
+    <link rel="stylesheet" type="text/css" href="main.css">
 </head>
 <body>
+
+<!--     <div id="container">
+
+          <div id="tree1">
+          </div>
+
+          <div id="tree2">
+          </div>
+
+          <div id="tree3">
+          </div>
+
+          <div id="tree4">
+          </div> 
+
+          <div id="tree5">
+          </div>
+
+          <div id="tree6">
+          </div>
+
+          <div id="tree7">
+          </div>
+
+          <div id="tree8">
+          </div>
+
+          <div id="tree9">
+          </div>
+
+          <div id="tree10">
+          </div>
+
+      </div>
+
+      <div id="line">
+      </div>
+
+    <script>
+
+      function transform(){
+        TweenMax.staggerTo(['#tree1','#tree2', '#tree3','#tree4','#tree5','#tree6','#tree7','#tree8','#tree9','#tree10'], 4, {y: -90, ease: Power1.easeOut})
+      }
+
+      $('#button').onStart(function(){
+        transform();
+      });
+
+
+
+    </script> -->
+
+
+
+
+
 <div class="container">
   <h1 id="HeadText">Forage Missoula: Know the Area Through Our Diverse Natural Foods</h1>
   <div id="myCarousel" class="carousel slide" data-ride="carousel">
@@ -102,15 +166,7 @@
 
 
 
-<% if(user.local) { %>
-<form action="http://maps.google.com/maps" method="get" target="_blank">
-   <label for="saddr">Enter your location</label>
-   <input type="text" name="saddr" />
-   <input type="text" name="daddr" value=/>
-<!--    <input type="hidden" name="daddr" value="22 Campus Dr, Missoula, MT 59801 (UM Campus: University Center)" /> -->
-   <input type="submit" value="Get directions" />
-</form>
-<% } %>
+
 
 
 
