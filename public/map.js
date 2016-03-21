@@ -103,7 +103,7 @@ console.log(url, "url in getFlora");
 
 
     }
-    var filterData = category ? data.filter(f => f.category === category) : data;
+    var filterData = category ? data.filter(function(f){f.category === category}) : data;
 
     var filterSearch = searchText ? filterData.filter(function(f){
       var name = f.name || '';
