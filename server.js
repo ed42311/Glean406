@@ -71,6 +71,20 @@ app.get('/contact', function(req, res){
 
 app.use('/api/flora', floraRoutes);
 
+// app.delete('/api/flora/:id', function(req, res){
+//     var id = Number(req.params.id); 
+//     var deleteFlora = '';
+
+//     flora.forEach(function(flora){
+//         if(flora.id === id){
+//             deleteFlora = flora;
+//         var index = flora.indexOf(deleteFlora);
+//             flora.splice(index, 1);
+//         }
+//     });
+//     res.json(deleteFlora);
+// })
+
 
 app.listen(port, function(req, res){
   console.log('⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡\n⚡⚡⚡⚡ Forage Away ' + port + ' ⚡⚡⚡⚡\n⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡')
