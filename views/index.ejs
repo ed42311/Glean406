@@ -18,7 +18,7 @@
 </head>
 <body>
 
-<!--     <div id="container">
+       <div id="container">
 
           <div id="tree1">
           </div>
@@ -57,17 +57,9 @@
 
     <script>
 
-      function transform(){
-        TweenMax.staggerTo(['#tree1','#tree2', '#tree3','#tree4','#tree5','#tree6','#tree7','#tree8','#tree9','#tree10'], 4, {y: -90, ease: Power1.easeOut})
-      }
-
-      $('#button').onStart(function(){
-        transform();
-      });
-
-
-
-    </script> -->
+        TweenMax.staggerFrom(['#tree1','#tree2', '#tree3','#tree4','#tree5','#tree6','#tree7','#tree8','#tree9','#tree10'], 4, {opacity: 0, y: 90, ease: Power1.easeOut, delay: 0.5}, .2)
+  
+    </script>
 
 
 
