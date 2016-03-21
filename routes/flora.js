@@ -10,7 +10,9 @@ router.use(function(req, res, next){
 
 router.route('/')
   .get(function(req, res){
-  	Flora.find(function(err, flora){
+  	Flora.find()
+    .populate("creator")
+    .exec(function(err, flora){
   	  if(err){
   	  	console.log('i found an error')
   	  	console.log(err)
@@ -29,6 +31,7 @@ router.route('/')
   	flora.lat = req.body.lat;
     flora.lng = req.body.lng;
     flora.isPrivate = req.body.isPrivate;
+    flora.creator = req.user._id;
     console.log(flora);
     flora.save(function(err, flora){
   	  if(err){
@@ -80,8 +83,19 @@ router.route('/:flora_id')
   	  	res.json({message: 'post deleted'})
   	  }
   	})
-  })
+  });
 
+router.route('/myFlora/hello')
+  .get(function(req, res){
+    console.log(req.user._id);
+    Flora.find({creator: req.user._id}, function(err, flora){
+      if(err){
+        res.send(err)
+     } else {
+      res.json(flora);
+     }
+    })
+  })
    
 
 module.exports = router;

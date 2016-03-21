@@ -140,6 +140,9 @@
         <option>Fungi</option>
         <option>Herbs</option>
         <option>Root Vegetables</option>
+      <% if(user.local) { %>
+        <option>My Posts</option>
+              <% } %>
       </select>
       <div class="spacer50"></div>
       <div class="form-group row">
@@ -147,10 +150,20 @@
       </div>
       <input type="submit" class="btn btn-default" id="searchButton"></input>
       
+      <% if(!user.local) { %>
       <div>
         <h3>Sign up now to be able to post new Forage spots!</h3>
-        <a id="indexReg" class="btn btn-large btn-block btn-default" href="/signup" role="button">Register Now</a>
+        <a id="" class="btn btn-large btn-block btn-default" href="/signup" role="button">Register Now</a>
       </div>
+      <% } %>
+      <% if(user.local) { %>
+      <div>
+        <h3>Delete your old foraging spots</h3>
+        <a id="" class="btn btn-danger " href="/" role="button">Delete Post</a>
+      </div>
+      <% } %>
+
+
 
     </div>  
   

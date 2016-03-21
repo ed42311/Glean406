@@ -8,7 +8,10 @@ var FloraSchema = new Schema({
   	isPrivate: {type: Boolean, default: false},
   	lat: String,
   	lng: String,
-	description: String
+	description: String,
+	creator: {type: mongoose.Schema.Types.ObjectId, ref: "User"}
+
+
 });
 
 module.exports = mongoose.model('Flora', FloraSchema);
