@@ -50,6 +50,9 @@
           <div id="tree10">
           </div>
 
+          <div id="M">
+          </div>
+
       </div>
 
       <div id="line">
@@ -57,7 +60,7 @@
 
     <script>
 
-        TweenMax.staggerFrom(['#tree1','#tree2', '#tree3','#tree4','#tree5','#tree6','#tree7','#tree8','#tree9','#tree10'], 4, {opacity: 0, y: 90, ease: Power1.easeOut, delay: 0.5}, .2)
+        TweenMax.staggerFrom(['#tree1','#tree2', '#tree3','#tree4','#tree5','#tree6','#tree7','#tree8','#tree9','#tree10', '#M'], 4, {opacity: 0, y: 90, ease: SteppedEase.config(12), delay: 0.5}, .2)
   
     </script>
 

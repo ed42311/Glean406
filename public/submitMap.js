@@ -67,6 +67,11 @@ function submitForm(e){
           console.log(checkbox, "CHECKBODXXXXX")
 
 
+          if(!name || !category || !season || !description || !templat) {
+            alert("Please fill out form completely!")
+            return
+          };
+
           var data = ({
                     name: name,
                     category: category,
@@ -77,6 +82,7 @@ function submitForm(e){
                     isPrivate: checkbox
             });
             console.log(data);
+
             $.ajax({
               url: "/api/flora",
               dataType: 'json',

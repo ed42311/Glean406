@@ -1,9 +1,27 @@
+#treebox {
+  height: 91px;
+  width: 80px;
+  overflow: hidden;
+}
+#space {
+  padding-bottom: 20px;
+}
+#mush {
+  height: 74%;
+  width: 74%;
+  position: center;
+  margin-left: 120px;
+}
+#blue {
+  height: 70%;
+  width: 70%;
+  position: center;
+}
 #container {
 display: block;
 height: 100px;
 align-content: center;
 }
-
 #tree1, #tree2, #tree3, #tree4, #tree5, #tree6, #tree7, #tree8, #tree9, #tree10 {
   display: inline-flex;
   position: center;
@@ -15,6 +33,16 @@ align-content: center;
   border-left-width: 30px;
   border-right-width: 30px;
 
+}
+
+#M {
+  display: inline-flex;
+  position: center;
+  background-image: url('./M.png');
+  height: 100px;
+  background-color: #000;
+  border-left-width: 30px;
+  border-right-width: 30px;
 }
 
 #line{

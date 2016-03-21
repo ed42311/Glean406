@@ -29,7 +29,7 @@ function getFlora(map, category, searchText){
     dataType: 'json',
     type: 'GET'
   }).done(function(data) {  
-    var filterData = category ? data.filter(f => f.category === category) : data;
+    var filterData = category ? data.filter(function(f) {f.category === category}) : data;
     var filterSearch = searchText ? filterData.filter(function(f){
       var name = f.name || '';
       var season = f.season || '';
