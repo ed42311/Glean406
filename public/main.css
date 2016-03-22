@@ -17,6 +17,7 @@
   width: 70%;
   position: center;
 }
+
 #container {
 display: block;
 height: 100px;
@@ -52,8 +53,6 @@ align-content: center;
   position: relative;
   top: -10px;
 }
-
-
 .navbar {
   font-family: 'Lora', serif;
   font-weight: 600 ;
@@ -99,20 +98,33 @@ align-content: center;
 }
 #forageForm legend {
   font-size: 24px;
-/*  margin: 0 25px 0 25px;
-*/  margin: 35px auto 35px auto;
+}
+#forageForm {
+  margin: 35px auto 35px auto;
   width: 800px;
 }
 #ForageText {
   font-size: 24px !important;
-/*  margin-left: 125px;
-*/  width: 300px;
-  text-align: center;
-  margin-left: 0px;
+  font-family: 'Trebuchet MS';
+  width: 300px;
+
+}
+#catFilter {
+  margin-top: 20px;
+}
+#searchBar {
+  margin-left: 0;
+  margin-right: 0;
+}
+#signuptextbutton{
+  background-color: beige;
+  border-radius: 10px;
+  width: 180px;
+  margin-top: 40px;
 }
 .sizer1 img {
-	max-height: 50%;
-	max-width: 50%;
+  max-height: 50%;
+  max-width: 50%;
   background-color: #7FFF00;
 }
 .myMap > #map {
@@ -125,40 +137,46 @@ align-content: center;
   max-width: 37%;
 }
 #morel {
-	max-height: 26%;
-	max-width: 26%;
+  max-height: 26%;
+  max-width: 26%;
 }
 #rosemary {
-	max-height: 30%;
-	max-width: 30%;
+  max-height: 30%;
+  max-width: 30%;
 }
 #chantrelle {
-	max-height: 29%;
-	max-width: 29%;
+  max-height: 29%;
+  max-width: 29%;
 }
 #chive {
-	max-height: 33%;
-	max-width: 33%;
+  max-height: 33%;
+  max-width: 33%;
+}
+.sizer3 img{
+  max-height: 33%;
+  max-width: 33%;
+  max-height: 32%;
+  max-width: 32%;
 }
 #cactus {
   max-height: 29%;
   max-width: 29%;
 }
 .sizer3 img{
-	max-height: 33%;
-	max-width: 33%;
+  max-height: 33%;
+  max-width: 33%;
 }
 #onion {
   max-height: 33%;
   max-width: 33%;
 }
 #straw{
-	max-height: 29%;
-	max-width: 29%;
+  max-height: 29%;
+  max-width: 29%;
 }
 #apple{
-	max-height: 29%;
-	max-width: 29%;
+  max-height: 29%;
+  max-width: 29%;
 }
 #map { 
   height: 600px;
@@ -292,6 +310,9 @@ align-content: center;
   margin-right: 50px;
   width: 0px;
   margin-left: 10px;
+}
+#mapRow {
+  align-content: center !important;
 }
 #catFilter {
   width: 200px;

@@ -16,6 +16,9 @@
     
     <link rel="stylesheet" type="text/css" href="main.css">
 </head>
+<body id="bg">
+
+<div id="bigIndex">
 <body>
 
        <div id="container">
@@ -115,9 +118,6 @@
 </div>
 
 
-
-
-
 <div class="container">
   <div class="row row centered" id="mapRow">
     
@@ -150,8 +150,9 @@
       </div>
       <input type="submit" class="btn btn-default" id="searchButton"></input>
       
+
       <% if(!user.local) { %>
-      <div>
+      <div class="container" id="signuptextbutton">
         <h3>Sign up now to be able to post new Forage spots!</h3>
         <a id="" class="btn btn-large btn-block btn-default" href="/signup" role="button">Register Now</a>
       </div>
@@ -169,20 +170,7 @@
   
   </div>
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+</div>
 </body>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.14.7/react.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.14.7/react-dom.js"></script>
