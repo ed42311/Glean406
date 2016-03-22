@@ -154,12 +154,14 @@
         <a id="" class="btn btn-large btn-block btn-default" href="/signup" role="button">Register Now</a>
       </div>
       <% } %>
-      <% if(user.local) { %>
-      <div>
-        <h3>Delete your old foraging spots</h3>
-        <a id="" class="btn btn-danger " href="/" role="button">Delete Post</a>
+     
+
+      <div class="container" id="mapLegend">
+        <h3 id="mapLegendtitle">Map Legend</h3>
+        <img id="mapLegendImg1" src='./images/mapmarker.png'/><p id="mapLegendtitle">Exact Location</p>
+        <img id="mapLegendImg2" src='./images/reddotimage.png'/><p id="mapLegendtitle">Vague Location</p>
       </div>
-      <% } %>
+
 
 
 
