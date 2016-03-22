@@ -54,7 +54,7 @@ align-content: center;
   font-weight: 600 ; 
 }
 #description {
-  text-align: center;
+  text-align: left;
   padding: 0 1px 0 1px;
   font-family: 'Lora', serif;
   font-weight: 600 ;
@@ -399,5 +399,25 @@ h1, h2, h3, h4, h5 {
     color: #f9f9f9 !important;
     transition: background-color color .4s;
 }
-
+#mapLegend {
+    border-radius: 25px;
+    border: 2px solid #73AD21;
+    margin-top: 10px;
+    padding: 10px;
+    height: 190px;
+    width: 178px;
+    
+}
+#mapLegendtitle {
+      margin-top: 0px;
+      margin-bottom: 0px;
+      text-align: center;
+      padding-bottom: 5px;
+}
+#mapLegendImg1 {
+  padding-left: 49px;
+}
+#mapLegendImg2{
+  padding-left: 49px;
+}
 
