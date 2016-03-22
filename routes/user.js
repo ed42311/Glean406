@@ -10,11 +10,22 @@ module.exports = function(app, passport) {
        failureFlash: true // allow flash messages
    }));
 
-   app.post('/login', passport.authenticate('local-login', {
-       successRedirect: '/', // redirect to the secure profile section
-       failureRedirect: '/login',  // redirect back to the signup page if there is an error
-       failureFlash: true // allow flash messages
-   }));
+  app.post('/login', function(req, res, next) {
+      passport.authenticate('local-login', function(err, user, info) {
+        switch (req.accepts('html', 'json')) {
+          case 'json':
+            if (err)  { return next(err); }
+            if (!user) { return res.status(401).send({"ok": false}); }
+            req.logIn(user, function(err) {
+              if (err) { return res.status(401).send({"ok": false}); }
+              return res.send({"ok": true});
+            });
+            break;
+          default:
+            res.status(406).send();
+        }
+      })(req, res, next);
+    });
 
    app.get('/login', function(req, res) {
       console.log("user at login: ")

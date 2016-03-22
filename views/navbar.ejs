@@ -21,14 +21,19 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse navbar-ex1-collapse">
                  
-         <% if(user.local) { %>
+         
+
+      <ul class="nav navbar-nav navbar-right">
+      <ul class="nav navbar-nav">
+        
+        <li><a>
+            <% if(user.local) { %>
             <%= user.local.email %>
             <% } else { %>
              
             <% } %>
+        </a></li>
 
-      <ul class="nav navbar-nav navbar-right">
-      <ul class="nav navbar-nav">
         <li><a href="/contact">About/Contact</a></li>
       </ul>
         <li><a href="#"></a></li>

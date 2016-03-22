@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     <link href='https://fonts.googleapis.com/css?family=Lora' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="./main.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" rel="stylesheet"/>
 </head>
 <body class="login-bg loaded">
   <div class="container">
@@ -18,7 +19,7 @@
         </div>
 
           
-          <form action="/login" method="POST" role="form" id="login">
+          <form role="form" id="login">
 
           <div id="userInfo">
             <div class="form-group">
@@ -48,7 +49,57 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/blueimp-md5/1.1.1/js/md5.js"></script>
 <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+<script>
+
+toastr.options = {
+  "closeButton": false,
+  "newestOnTop": false,
+  "progressBar": false,
+  "positionClass": "toast-bottom-center",
+  "preventDuplicates": false,
+  "onclick": null,
+  "showDuration": "1000",
+  "hideDuration": "1000",
+  "timeOut": "5000",
+  "showEasing": "swing",
+  "hideEasing": "linear",
+  "showMethod": "fadeIn",
+  "hideMethod": "fadeOut"
+}
+
+
+$("#login").submit(function(e){
+  e.preventDefault();
+
+  var formData = {
+    'email': $('input[name=email]').val(),
+    'password': $('input[name=password]').val()
+  };
+
+  $.ajax({
+    type        : 'POST', // define the type of HTTP verb we want to use (POST for our form)
+    dataType: 'json',
+    url         : '/login', // the url where we want to POST
+    data        : formData,
+    success: function (response) {
+      window.location.href = '/'
+    },
+    error: function(err){
+
+
+      toastr['error']('Incorrect email / password!')
+    }
+  })
+})
+
+
+
+
+
+</script>
 
 </body>
 </html>

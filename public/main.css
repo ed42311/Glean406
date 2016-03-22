@@ -17,40 +17,154 @@
   width: 70%;
   position: center;
 }
-#container {
-display: block;
-height: 100px;
-align-content: center;
+#treeContainer {
+  overflow: hidden;
+  display: block;
+  height: 100px;
+  align-content: center;
 }
-#tree1, #tree2, #tree3, #tree4, #tree5, #tree6, #tree7, #tree8, #tree9, #tree10 {
+#tree1 {
   display: inline-flex;
   position: center;
-  background-image: url('./images/tree.jpg');
+  background-image: url('./images/apple1.png');
   top: 55px;
   width: 80px;
   height: 91px;
-  background-color: #000;
   border-left-width: 30px;
   border-right-width: 30px;
-
 }
-
-#M {
+#tree2 {
   display: inline-flex;
   position: center;
-  background-image: url('./M.png');
-  height: 100px;
-  background-color: #000;
+  background-image: url('./images/tree2.png');
+  top: 55px;
+  width: 80px;
+  height: 91px;
   border-left-width: 30px;
   border-right-width: 30px;
+}
+#tree3 {
+  display: inline-flex;
+  position: center;
+  background-image: url('./images/tree3.png');
+  top: 55px;
+  width: 80px;
+  height: 91px;
+  border-left-width: 30px;
+  border-right-width: 30px;
+}
+#tree4 {
+  display: inline-flex;
+  position: center;
+  background-image: url('./images/tree4.png');
+  top: 55px;
+  width: 80px;
+  height: 91px;
+  border-left-width: 30px;
+  border-right-width: 30px;
+}
+#tree5 {
+  display: inline-flex;
+  position: center;
+  background-image: url('./images/tree5.png');
+  top: 55px;
+  width: 80px;
+  height: 91px;
+  border-left-width: 30px;
+  border-right-width: 30px;
+}
+#tree6 {
+  display: inline-flex;
+  position: center;
+  background-image: url('./images/tree6.png');
+  top: 55px;
+  width: 80px;
+  height: 91px;
+  border-left-width: 30px;
+  border-right-width: 30px;
+}
+#tree7 {
+  display: inline-flex;
+  position: center;
+  background-image: url('./images/tree7.png');
+  top: 55px;
+  width: 80px;
+  height: 91px;
+  border-left-width: 30px;
+  border-right-width: 30px;
+}
+#tree8 {
+  display: inline-flex;
+  position: center;
+  background-image: url('./images/tree8.png');
+  top: 55px;
+  width: 80px;
+  height: 91px;
+  border-left-width: 30px;
+  border-right-width: 30px;
+}
+#tree9 {
+  display: inline-flex;
+  position: center;
+  background-image: url('./images/tree9.png');
+  top: 55px;
+  width: 80px;
+  height: 91px;
+  border-left-width: 30px;
+  border-right-width: 30px;
+}
+#tree10 {
+  display: inline-flex;
+  position: center;
+  background-image: url('./images/tree10.png');
+  top: 55px;
+  width: 80px;
+  height: 91px;
+  border-left-width: 30px;
+  border-right-width: 30px;
+}
+@media only screen and (max-width: 1224px) {
+    #tree2, #tree3, #tree4 {
+        display: none;
+    }
+}
+@media only screen and (max-width: 975px) {
+    #tree2, #tree3, #tree4, #tree5, #tree6  {
+        display: none;
+    }
+}
+@media only screen and (max-width: 807px) {
+    #tree2, #tree3, #tree4, #tree5, #tree6, #tree7, #tree8 {
+        display: none;
+    }
+}
+@media only screen and (max-width: 807px) {
+    #tree2, #tree3, #tree4, #tree5, #tree6, #tree7, #tree8, #tree9 {
+        display: none;
+    }
+}
+@media only screen and (max-width: 807px) {
+    #tree1, #tree2, #tree3, #tree4, #tree5, #tree6, #tree7, #tree8, #tree9, #tree10, #apple1, #M2 {
+        display: none;
+    }
+}
+#M2 {
+  display: inline-flex;
+  position: center;
+  background-image: url('./images/M2.png');
+  height: 96px;
+  width: 230px;
+  border-left-width: 30px;
+  border-right-width: 30px;
+  margin-left: 150px;
 }
 
 #line{
-  border-top-color: #fff;
+  color: green;
   border-top-width: 2px;
   border-style: solid;
   position: relative;
-  top: -10px;
+  top: -5px;
 }
 
 
@@ -58,6 +172,7 @@ align-content: center;
   font-family: 'Lora', serif;
   font-weight: 600 ;
   background-color: green;
+  margin-bottom: 0px;
 }
 .navbar a {
   color: black !important;
@@ -164,6 +279,8 @@ align-content: center;
   height: 600px;
   width: 600px;
   margin: auto;
+  -webkit-clip-path: polygon(100% 0%, 75% 50%, 100% 100%, 25% 100%, 0% 50%, 25% 0%);
+clip-path: polygon(100% 0%, 75% 50%, 100% 100%, 25% 100%, 0% 50%, 25% 0%);
 }
 .login-bg {
     background-color: rgba(242,245,242,1);
@@ -428,4 +545,7 @@ h1, h2, h3, h4, h5 {
     transition: background-color color .4s;
 }
 
+#toast-container {
+  margin-bottom: 50px;
+}
 

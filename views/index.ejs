@@ -18,7 +18,7 @@
 </head>
 <body>
 
-       <div id="container">
+       <div id="treeContainer">
 
           <div id="tree1">
           </div>
@@ -50,7 +50,7 @@
           <div id="tree10">
           </div>
 
-          <div id="M">
+          <div id="M2">
           </div>
 
       </div>
@@ -59,13 +59,11 @@
       </div>
 
     <script>
-
-        TweenMax.staggerFrom(['#tree1','#tree2', '#tree3','#tree4','#tree5','#tree6','#tree7','#tree8','#tree9','#tree10', '#M'], 4, {opacity: 0, y: 90, ease: SteppedEase.config(12), delay: 0.5}, .2)
-  
+        TweenMax.staggerFrom(['#tree1','#tree2', '#tree3','#tree4','#tree5','#tree6','#tree7','#tree8','#tree9','#tree10'], 2, {opacity: 0, y: 90, ease: Power3.easeIn}, .2);
     </script>
-
-
-
+    <script>
+        TweenMax.staggerFrom(['#M2'], 2.5, { ease: Power1.easeInOut, opacity: 1, x: 700, delay: 1.5 }, .5);
+    </script>
 
 
 <div class="container">
@@ -113,10 +111,6 @@
     </a>
   </div>    
 </div>
-
-
-
-
 
 <div class="container">
   <div class="row row centered" id="mapRow">
@@ -170,19 +164,6 @@
   </div>
 </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 </body>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.14.7/react.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.14.7/react-dom.js"></script>
@@ -195,4 +176,5 @@
     </script>
     <script src="mapstyles.js"></script>
     <script src="map.js"> </script>
+
 </html>

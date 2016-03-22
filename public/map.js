@@ -1,6 +1,17 @@
 var templat;
 var templng;
 
+function deleteFlora() {
+  var gettingId = document.getElementById("searchDisplayOnMap").getAttribute("floraId");
+  
+  $.ajax({
+    type: 'DELETE',
+    url: "/api/flora/" + gettingId
+  }).done(function() {
+    window.location = "/";
+  })
+}
+
 function initMap(category, searchText) {
   var map = new google.maps.Map(document.getElementById('map'), {
     center: {lat: 46.86077911287492, lng: -113.99279092176516},
@@ -15,8 +26,8 @@ function initMap(category, searchText) {
     disableDoubleClickZoom: false,
     scrollwheel: false
   });
-console.log(category, "category in initMap");
   getFlora(map, category, searchText);
+
 }
 
 function getFlora(map, category, searchText){
@@ -26,7 +37,6 @@ function getFlora(map, category, searchText){
   } else {
     var url = "/api/flora"
   }
-console.log(url, "url in getFlora");
 
   $.ajax({
     url: url,
@@ -36,8 +46,8 @@ console.log(url, "url in getFlora");
 
     console.log(data);
     if(category === 'My Posts'){
-          var filterData = data;
-    var filterSearch = searchText ? filterData.filter(function(f){
+      var filterData = data;
+      var filterSearch = searchText ? filterData.filter(function(f){
       var name = f.name || '';
       var season = f.season || '';
       var category = f.category || '';
@@ -53,17 +63,14 @@ console.log(url, "url in getFlora");
       
       // var directions = ("<a href="https://www.google.com/maps/dir/Current+Location/"+ "flora.lat" + "," + "flora.lng" + """ + ">" + ")
 
-      var contentString = ('<div id=' + flora.name + '>\
+      var contentString = ('<div id=searchDisplayOnMap floraId=' + flora._id + '>\
                    <p> <h3>' + flora.name + '</h3> </p>\
                    <p> <h5>' + "Harvest Season: " + flora.season + '<h5> </p>\
                    <p> <h5>' + "Type: " + flora.category + '<h5> </p>\
                    <p> <h5>' + "Description: " + flora.description + '<h5> </p>\
                    <p> <h5>' + "<button><a href=https://www.google.com/maps/dir/Current+Location/" + flora.lat + "," + flora.lng + " target=_blank>Get Directions </a></button>" +'<h5> </p>\
-                   <p> <h5>' + "<button><a href="/" >Delete Post </a></button>" + '<h5> </p>\
+                   <p> <h5>' + "<button class='floraDelete' id=" + flora._id + " onClick='deleteFlora()'>Delete Post</button>" + '<h5> </p>\
                  </div>');
-
-                   // <p> <h5>' + "<a role="button" class="btn btn-large btn-block btn-default" href=https://www.google.com/maps/dir/Current+Location/" + flora.lat + "," + flora.lng + " target=_blank>Get Directions</a>" +'<h5> </p>\
-
 
       var infowindow = new google.maps.InfoWindow({
         content: contentString,
@@ -99,10 +106,9 @@ console.log(url, "url in getFlora");
         infowindow.open(map, floraMarker);
       });
     });
+  }
 
-
-
-    }
+ 
     var filterData = category ? data.filter(f => f.category === category) : data;
 
     var filterSearch = searchText ? filterData.filter(function(f){
@@ -183,6 +189,7 @@ $(document).ready(function(){
     initMap(category === 'All' ? undefined : category, searchText)
   })
 })
+
 
 /*
       var markerOne = new google.maps.Marker({
