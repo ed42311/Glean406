@@ -239,6 +239,12 @@
   margin-bottom: 10px;
   padding-bottom: 15px;
 }
+#aboutheader{
+  text-align: center;
+}
+#featurerow{
+  margin-top: 30px;
+}
 .sizer1 img {
   max-height: 50%;
   max-width: 50%;
@@ -475,6 +481,7 @@ clip-path: polygon(100% 0%, 75% 50%, 100% 100%, 25% 100%, 0% 50%, 25% 0%);
   padding-left: 15px;
   border-radius: 15px;
   width: 100%;
+  overflow: hidden;
 }
 #bg {
   background-color: white;
