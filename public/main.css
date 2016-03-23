@@ -231,13 +231,19 @@
   margin-left: 0;
   margin-right: 0;
 }
-#signuptextbutton{
-  background-color: beige;
-  border-radius: 10px;
-  width: 180px;
-  margin-top: 40px;
-  margin-bottom: 10px;
-  padding-bottom: 15px;
+#signuptextcontainer{
+  border-radius: 25px;
+  border: 2px solid green;
+  margin-top: 10px;
+  padding: 0 10px 10px 10px;
+  height: 190px;
+  width: 178px;
+}
+#signuptextbutton:hover{
+  border-color: transparent;
+  background-color: green;
+  color: #f9f9f9 !important;
+  transition: background-color color .4s;
 }
 #aboutheader{
   text-align: center;
@@ -575,22 +581,22 @@ h1, h2, h3, h4, h5 {
 
 
 #toast-container {
-  margin-bottom: 50px;
+  margin-bottom: 200px;
 }
 #mapLegend {
-    border-radius: 25px;
-    border: 2px solid green;
-    margin-top: 10px;
-    padding: 10px;
-    height: 190px;
-    width: 178px;
-    
+  border-radius: 25px;
+  border: 2px solid green;
+  margin-top: 10px;
+  padding: 10px;
+  height: 190px;
+  width: 178px;
+
 }
 #mapLegendtitle {
-      margin-top: 0px;
-      margin-bottom: 0px;
-      text-align: center;
-      padding-bottom: 5px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  text-align: center;
+  padding-bottom: 5px;
 }
 #mapLegendImg1 {
   padding-left: 49px;
@@ -599,4 +605,20 @@ h1, h2, h3, h4, h5 {
   padding-left: 49px;
 
 }
-
+#indexpost{
+  border-radius: 25px;
+  border: 2px solid green;
+  margin-top: 10px;
+  padding: 10px;
+  height: 150px;
+  width: 178px;
+}
+#indexPostButton:hover{
+  border-color: transparent;
+  background-color: green;
+  color: #f9f9f9 !important;
+  transition: background-color color .4s;
+}
+#indexPostTitle{
+  margin-top: 5px;
+}

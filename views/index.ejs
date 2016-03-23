@@ -129,7 +129,7 @@
     <div class="col-xs-6 col-centered" id="map"></div>
     
     <div class="col-xs-3 col-centered" id='catFilter'>
-      <h4>Filter By Categories</h4>
+      <h4>Filter By Category</h4>
       <select class="form-control" id="categoryControl">
         <option>All</option>
         <option>Berries</option>
@@ -149,13 +149,20 @@
       
 
       <% if(!user.local) { %>
-      <div class="container" id="signuptextbutton">
+      <div class="container" id="signuptextcontainer">
         <h3>Sign up now to be able to post new Forage spots!</h3>
-        <a id="" class="btn btn-large btn-block btn-default" href="/signup" role="button">Register Now</a>
+        <a id="signuptextbutton" class="btn btn-large btn-block btn-default" href="/signup" role="button">Register Now</a>
       </div>
       <% } %>
-     
+      
+      <% if(user.local) { %>
+      <div class="container" id="indexpost">
+        <h3 id="indexPostTitle">Post a new forage location!</h3>
+        <a id="indexPostButton" class="btn btn-large btn-block btn-default" href="/submitForage" role="button">New Post</a>
+      </div>
+      <% } %>
 
+       
       <div class="container" id="mapLegend">
         <h3 id="mapLegendtitle">Map Legend</h3>
         <img id="mapLegendImg1" src='./images/mapmarker.png'/><p id="mapLegendtitle">Exact Location</p>
