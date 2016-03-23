@@ -236,6 +236,14 @@
   border-radius: 10px;
   width: 180px;
   margin-top: 40px;
+  margin-bottom: 10px;
+  padding-bottom: 15px;
+}
+#aboutheader{
+  text-align: center;
+}
+#featurerow{
+  margin-top: 30px;
 }
 .sizer1 img {
   max-height: 50%;
@@ -471,6 +479,7 @@
   padding-left: 15px;
   border-radius: 15px;
   width: 100%;
+  overflow: hidden;
 }
 #bg {
   background-color: white;
@@ -570,7 +579,7 @@ h1, h2, h3, h4, h5 {
 }
 #mapLegend {
     border-radius: 25px;
-    border: 2px solid #73AD21;
+    border: 2px solid green;
     margin-top: 10px;
     padding: 10px;
     height: 190px;
