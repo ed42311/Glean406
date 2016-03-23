@@ -107,7 +107,7 @@ function getFlora(map, category, searchText){
       });
     });
   }
-}
+});
     var filterData = category ? data.filter(function(f){f.category === category}) : data;
 
     var filterSearch = searchText ? filterData.filter(function(f){
@@ -171,8 +171,7 @@ function getFlora(map, category, searchText){
         infowindow.open(map, floraMarker);
       });
     });
-  });
-};
+  }
 
 $('#categoryControl').change(function() {
   var category = this.value;
