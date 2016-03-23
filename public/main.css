@@ -297,8 +297,6 @@
   height: 600px;
   width: 600px;
   margin: auto;
-  -webkit-clip-path: polygon(100% 0%, 75% 50%, 100% 100%, 25% 100%, 0% 50%, 25% 0%);
-clip-path: polygon(100% 0%, 75% 50%, 100% 100%, 25% 100%, 0% 50%, 25% 0%);
 }
 .login-bg {
     background-color: rgba(242,245,242,1);
