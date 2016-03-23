@@ -50,18 +50,16 @@ function getFlora(map, category, searchText){
 
 function floraFound(data, map, category, searchText){
 
-  console.log(data);
   if(category === 'My Posts'){
     foundMyFlora(data, map, category, searchText);
   }
-    
-  console.log(category);
+  
 
   floraNotMine(data, map, category, searchText);
 }
 
 function floraNotMine(data, map, category, searchText){
-  var filterData = category ? data.filter(function(f){f.category === category}) : data;
+  var filterData = category ? data.filter(function(f){return f.category === category}) : data;
   var filterSearch = searchText ? filterData.filter(function(f){
     var name = f.name || '';
     var season = f.season || '';
