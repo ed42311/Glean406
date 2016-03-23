@@ -65,12 +65,10 @@ function floraNotMine(data, map, category, searchText){
     var season = f.season || '';
     var category = f.category || '';
     var description = f.description || '';  
-    var creator = f.creator || '';
     return  name.indexOf(searchText) > -1 || 
             season.indexOf(searchText) > -1 ||
             category.indexOf(searchText) > -1 ||
-            description.indexOf(searchText) > -1 ||
-            creator.indexOf(searchText) > -1;
+            description.indexOf(searchText) > -1;
   }) : filterData;
   filterSearch.forEach(function(flora) {
     
