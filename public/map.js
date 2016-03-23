@@ -186,11 +186,16 @@ $('#categoryControl').change(function() {
 })
 
 $(document).ready(function(){
-  $('#searchButton').click(function(e) {
+  $('#searchButton').on('click', function(e) {
     e.preventDefault();
     var searchText = $('#searchText').val();
     var category = $('#categoryControl').val();
     initMap(category === 'All' ? undefined : category, searchText)
+  })
+  $('#searchText').keypress(function(e) {
+    if (e.which === 13) {
+      $('#searchButton').click();
+    }
   })
 })
 
