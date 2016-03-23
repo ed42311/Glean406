@@ -61,15 +61,13 @@ function getFlora(map, category, searchText){
     }) : filterData;
     filterSearch.forEach(function(flora) {
       
-      // var directions = ("<a href="https://www.google.com/maps/dir/Current+Location/"+ "flora.lat" + "," + "flora.lng" + """ + ">" + ")
-
       var contentString = ('<div id=searchDisplayOnMap floraId=' + flora._id + '>\
                    <p> <h3>' + flora.name + '</h3> </p>\
-                   <p> <h5>' + "Harvest Season: " + flora.season + '<h5> </p>\
-                   <p> <h5>' + "Type: " + flora.category + '<h5> </p>\
-                   <p> <h5>' + "Description: " + flora.description + '<h5> </p>\
-                   <p> <h5>' + "<button><a href=https://www.google.com/maps/dir/Current+Location/" + flora.lat + "," + flora.lng + " target=_blank>Get Directions </a></button>" +'<h5> </p>\
-                   <p> <h5>' + "<button class='floraDelete' id=" + flora._id + " onClick='deleteFlora()'>Delete Post</button>" + '<h5> </p>\
+                   <p> <h5>' + "Harvest Season: " + flora.season + '</h5> </p>\
+                   <p> <h5>' + "Type: " + flora.category + '</h5> </p>\
+                   <p> <h5>' + "Description: " + flora.description + '</h5> </p>\
+                   <p> <h5>' + "<button><a href=https://www.google.com/maps/dir/Current+Location/" + flora.lat + "," + flora.lng + " target=_blank>Get Directions </a></button>" +'</h5> </p>\
+                   <p> <h5>' + "<button class='floraDelete' id=" + flora._id + " onClick='deleteFlora()'>Delete Post</button>" + '</h5> </p>\
                  </div>');
 
       var infowindow = new google.maps.InfoWindow({
@@ -124,17 +122,14 @@ function getFlora(map, category, searchText){
     }) : filterData;
     filterSearch.forEach(function(flora) {
       
-      // var directions = ("<a href="https://www.google.com/maps/dir/Current+Location/"+ "flora.lat" + "," + "flora.lng" + """ + ">" + ")
 
       var contentString = ('<div id=' + flora.name + '>\
                    <p> <h3>' + flora.name + '</h3> </p>\
-                   <p> <h5>' + "Harvest Season: " + flora.season + '<h5> </p>\
-                   <p> <h5>' + "Type: " + flora.category + '<h5> </p>\
-                   <p> <h5>' + "Description: " + flora.description + '<h5> </p>\
-                   <p> <h5>' + "<button><a href=https://www.google.com/maps/dir/Current+Location/" + flora.lat + "," + flora.lng + " target=_blank>Get Directions </a></button>" +'<h5> </p>\
+                   <p> <h5>' + "Harvest Season: " + flora.season + '</h5> </p>\
+                   <p> <h5>' + "Type: " + flora.category + '</h5> </p>\
+                   <p> <h5>' + "Description: " + flora.description + '</h5> </p>\
+                   <p> <h5>' + "<button><a href=https://www.google.com/maps/dir/Current+Location/" + flora.lat + "," + flora.lng + " target=_blank>Get Directions </a></button>" +'</h5> </p>\
                  </div>');
-
-                   // <p> <h5>' + "<a role="button" class="btn btn-large btn-block btn-default" href=https://www.google.com/maps/dir/Current+Location/" + flora.lat + "," + flora.lng + " target=_blank>Get Directions</a>" +'<h5> </p>\
 
 
       var infowindow = new google.maps.InfoWindow({
